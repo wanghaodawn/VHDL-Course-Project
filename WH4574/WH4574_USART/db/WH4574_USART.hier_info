@@ -1,0 +1,271 @@
+|WH4574_USART_ALL
+led_sa <= WH4574_DISPLAY8:inst6.led_sa
+CLK50MHZ => WH4574_DIV50:inst1.CLK
+CLK50MHZ => wh4574_div1k:inst4.clk50m
+RXD => wh4574_sci:inst5.rxd
+led_sb <= WH4574_DISPLAY8:inst6.led_sb
+led_sc <= WH4574_DISPLAY8:inst6.led_sc
+led_a <= WH4574_DISPLAY8:inst6.led_a
+led_b <= WH4574_DISPLAY8:inst6.led_b
+led_c <= WH4574_DISPLAY8:inst6.led_c
+led_d <= WH4574_DISPLAY8:inst6.led_d
+led_e <= WH4574_DISPLAY8:inst6.led_e
+led_f <= WH4574_DISPLAY8:inst6.led_f
+led_g <= WH4574_DISPLAY8:inst6.led_g
+led_dp <= WH4574_DISPLAY8:inst6.led_dp
+TXD <= wh4574_sci:inst5.txd
+
+
+|WH4574_USART_ALL|WH4574_DISPLAY8:inst6
+din0[0] => num[0].DATAB
+din0[1] => num[1].DATAB
+din0[2] => num[2].DATAB
+din0[3] => num[3].DATAB
+din1[0] => num~23.DATAB
+din1[1] => num~22.DATAB
+din1[2] => num~21.DATAB
+din1[3] => num~20.DATAB
+din2[0] => num~19.DATAB
+din2[1] => num~18.DATAB
+din2[2] => num~17.DATAB
+din2[3] => num~16.DATAB
+din3[0] => num~15.DATAB
+din3[1] => num~14.DATAB
+din3[2] => num~13.DATAB
+din3[3] => num~12.DATAB
+din4[0] => num~11.DATAB
+din4[1] => num~10.DATAB
+din4[2] => num~9.DATAB
+din4[3] => num~8.DATAB
+din5[0] => num~7.DATAB
+din5[1] => num~6.DATAB
+din5[2] => num~5.DATAB
+din5[3] => num~4.DATAB
+din6[0] => num~3.DATAB
+din6[1] => num~2.DATAB
+din6[2] => num~1.DATAB
+din6[3] => num~0.DATAB
+din7[0] => num~3.DATAA
+din7[1] => num~2.DATAA
+din7[2] => num~1.DATAA
+din7[3] => num~0.DATAA
+clk => s[2].CLK
+clk => s[1].CLK
+clk => s[0].CLK
+led_sa <= sel~13.DB_MAX_OUTPUT_PORT_TYPE
+led_sb <= sel~12.DB_MAX_OUTPUT_PORT_TYPE
+led_sc <= sel~11.DB_MAX_OUTPUT_PORT_TYPE
+led_a <= seg[0]~5.DB_MAX_OUTPUT_PORT_TYPE
+led_b <= seg[1]~58.DB_MAX_OUTPUT_PORT_TYPE
+led_c <= seg[2]~67.DB_MAX_OUTPUT_PORT_TYPE
+led_d <= seg[3]~76.DB_MAX_OUTPUT_PORT_TYPE
+led_e <= seg[4]~85.DB_MAX_OUTPUT_PORT_TYPE
+led_f <= seg[5]~94.DB_MAX_OUTPUT_PORT_TYPE
+led_g <= seg[6]~103.DB_MAX_OUTPUT_PORT_TYPE
+led_dp <= led_dp~3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|WH4574_USART_ALL|WH4574_COUNT26:inst
+CLK => CC[4].CLK
+CLK => CC[3].CLK
+CLK => CC[2].CLK
+CLK => CC[1].CLK
+CLK => CC[0].CLK
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|WH4574_USART_ALL|WH4574_DIV50:inst1
+CLK => CC[5].CLK
+CLK => CC[4].CLK
+CLK => CC[3].CLK
+CLK => CC[2].CLK
+CLK => CC[1].CLK
+CLK => CC[0].CLK
+CLK => Q~reg0.CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|WH4574_USART_ALL|wh4574_sci:inst5
+clk => rdfull_s.CLK
+clk => data_out[7]~reg0.CLK
+clk => data_out[6]~reg0.CLK
+clk => data_out[5]~reg0.CLK
+clk => data_out[4]~reg0.CLK
+clk => data_out[3]~reg0.CLK
+clk => data_out[2]~reg0.CLK
+clk => data_out[1]~reg0.CLK
+clk => data_out[0]~reg0.CLK
+clk => rxdf.CLK
+clk => txdf.CLK
+clk => tdempty_s.CLK
+clk => scir[5].CLK
+clk => scir[4].CLK
+clk => scir[3].CLK
+clk => scir[2].CLK
+clk => scir[1].CLK
+clk => scir[0].CLK
+clk => scit[5].CLK
+clk => scit[4].CLK
+clk => scit[3].CLK
+clk => scit[2].CLK
+clk => scit[1].CLK
+clk => scit[0].CLK
+clk => dfb[7].CLK
+clk => dfb[6].CLK
+clk => dfb[5].CLK
+clk => dfb[4].CLK
+clk => dfb[3].CLK
+clk => dfb[2].CLK
+clk => dfb[1].CLK
+clk => dfb[0].CLK
+reset => scit[0].ACLR
+reset => scit[1].ACLR
+reset => scit[2].ACLR
+reset => scit[3].ACLR
+reset => scit[4].ACLR
+reset => scit[5].ACLR
+reset => scir[0].ACLR
+reset => scir[1].ACLR
+reset => scir[2].ACLR
+reset => scir[3].ACLR
+reset => scir[4].ACLR
+reset => scir[5].ACLR
+reset => process_3~3.IN0
+reset => dfb[7].ACLR
+reset => dfb[6].ACLR
+reset => dfb[5].ACLR
+reset => dfb[4].ACLR
+reset => dfb[3].ACLR
+reset => dfb[2].ACLR
+reset => dfb[1].ACLR
+reset => dfb[0].ACLR
+rxd => rxdf~1.OUTPUTSELECT
+rxd => process_4~1.IN0
+rxd => process_4~0.IN0
+rxd => dfb[7].DATAIN
+rd => process_0~0.IN0
+wr => din_latch[7].CLK
+wr => din_latch[6].CLK
+wr => din_latch[5].CLK
+wr => din_latch[4].CLK
+wr => din_latch[3].CLK
+wr => din_latch[2].CLK
+wr => din_latch[1].CLK
+wr => din_latch[0].CLK
+wr => process_5~0.IN1
+wr => process_3~0.IN1
+cs => process_0~0.IN1
+cs => process_3~0.IN0
+cs => din_latch[0].ENA
+cs => din_latch[1].ENA
+cs => din_latch[2].ENA
+cs => din_latch[3].ENA
+cs => din_latch[4].ENA
+cs => din_latch[5].ENA
+cs => din_latch[6].ENA
+cs => din_latch[7].ENA
+txd <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+rdfull <= rdfull_s.DB_MAX_OUTPUT_PORT_TYPE
+tdempty <= tdempty_s.DB_MAX_OUTPUT_PORT_TYPE
+data_in[0] => din_latch[0].DATAIN
+data_in[1] => din_latch[1].DATAIN
+data_in[2] => din_latch[2].DATAIN
+data_in[3] => din_latch[3].DATAIN
+data_in[4] => din_latch[4].DATAIN
+data_in[5] => din_latch[5].DATAIN
+data_in[6] => din_latch[6].DATAIN
+data_in[7] => din_latch[7].DATAIN
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= data_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= data_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|WH4574_USART_ALL|WH4574_SEL2:inst11
+CLK => Q~reg0.ADATA
+CLK => Q~reg0.CLK
+CLK => C[5].CLK
+CLK => C[4].CLK
+CLK => C[3].CLK
+CLK => C[2].CLK
+CLK => C[1].CLK
+CLK => C[0].CLK
+CLK => Q~0.DATAB
+SEL => Q~reg0.ALOAD
+SEL => C[0].ENA
+SEL => C[5].ENA
+SEL => C[4].ENA
+SEL => C[3].ENA
+SEL => C[2].ENA
+SEL => C[1].ENA
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|WH4574_USART_ALL|WH4574_DIVTO1:inst8
+CLK => S.CLK
+CLK => Q~reg0.CLK
+CLK => CC[2].CLK
+CLK => CC[1].CLK
+CLK => CC[0].CLK
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|WH4574_USART_ALL|wh4574_div1k:inst4
+clk50m => count1[14].CLK
+clk50m => count1[13].CLK
+clk50m => count1[12].CLK
+clk50m => count1[11].CLK
+clk50m => count1[10].CLK
+clk50m => count1[9].CLK
+clk50m => count1[8].CLK
+clk50m => count1[7].CLK
+clk50m => count1[6].CLK
+clk50m => count1[5].CLK
+clk50m => count1[4].CLK
+clk50m => count1[3].CLK
+clk50m => count1[2].CLK
+clk50m => count1[1].CLK
+clk50m => count1[0].CLK
+clk50m => co.CLK
+clk1k <= count2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|WH4574_USART_ALL|WH4574_CONTROL:inst12
+CLK => SEL~reg0.CLK
+CLK => S[4].CLK
+CLK => S[3].CLK
+CLK => S[2].CLK
+CLK => S[1].CLK
+CLK => S[0].CLK
+CLK => SBUF[0].CLK
+CLK => SBUF[1].CLK
+CLK => SBUF[2].CLK
+CLK => SBUF[3].CLK
+CLK => SBUF[4].CLK
+CLK => SBUF[5].CLK
+CLK => SBUF[6].CLK
+CLK => SBUF[7].CLK
+CLK => DATA_IN[0]~reg0.CLK
+CLK => DATA_IN[1]~reg0.CLK
+CLK => DATA_IN[2]~reg0.CLK
+CLK => DATA_IN[3]~reg0.CLK
+CLK => DATA_IN[4]~reg0.CLK
+CLK => DATA_IN[5]~reg0.CLK
+CLK => DATA_IN[6]~reg0.CLK
+CLK => DATA_IN[7]~reg0.CLK
+DATA_IN[7] <= DATA_IN[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATA_IN[6] <= DATA_IN[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATA_IN[5] <= DATA_IN[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATA_IN[4] <= DATA_IN[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATA_IN[3] <= DATA_IN[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATA_IN[2] <= DATA_IN[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATA_IN[1] <= DATA_IN[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DATA_IN[0] <= DATA_IN[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEL <= SEL~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

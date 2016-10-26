@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Jan 04 06:45:31 2014
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : WH4574_MOUSE_CONNECT
+Top-level Entity Name : WH4574_MOUSE_OVERALL
+Family : Cyclone III
+Total logic elements : 331
+    Total combinational functions : 315
+    Dedicated logic registers : 125
+Total registers : 125
+Total pins : 15
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

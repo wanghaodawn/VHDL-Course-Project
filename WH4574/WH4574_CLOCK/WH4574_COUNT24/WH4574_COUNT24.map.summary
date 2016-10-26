@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Dec 30 21:13:14 2013
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : WH4574_COUNT24
+Top-level Entity Name : WH4574_COUNT24
+Family : Cyclone III
+Total logic elements : 14
+    Total combinational functions : 13
+    Dedicated logic registers : 12
+Total registers : 12
+Total pins : 10
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

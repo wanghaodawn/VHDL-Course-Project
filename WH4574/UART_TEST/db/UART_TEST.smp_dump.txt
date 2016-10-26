@@ -1,0 +1,26 @@
+
+State Machine - |TEST|UART_TEST:inst1|mode
+Name mode.receive mode.send mode.waiting 
+mode.waiting 0 0 0 
+mode.send 0 1 1 
+mode.receive 1 0 1 
+
+State Machine - |TEST|UART_TEST:inst1|nx_s
+Name nx_s.s3 nx_s.s2 nx_s.s1 nx_s.s0 
+nx_s.s0 0 0 0 0 
+nx_s.s1 0 0 1 1 
+nx_s.s2 0 1 0 1 
+nx_s.s3 1 0 0 1 
+
+State Machine - |TEST|UART_TEST:inst|mode
+Name mode.receive mode.send mode.waiting 
+mode.waiting 0 0 0 
+mode.send 0 1 1 
+mode.receive 1 0 1 
+
+State Machine - |TEST|UART_TEST:inst|nx_s
+Name nx_s.s3 nx_s.s2 nx_s.s1 nx_s.s0 
+nx_s.s0 0 0 0 0 
+nx_s.s1 0 0 1 1 
+nx_s.s2 0 1 0 1 
+nx_s.s3 1 0 0 1 

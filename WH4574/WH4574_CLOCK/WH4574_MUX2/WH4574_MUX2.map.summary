@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Jan 02 09:09:15 2014
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : WH4574_MUX2
+Top-level Entity Name : WH4574_MUX2
+Family : Cyclone III
+Total logic elements : 2
+    Total combinational functions : 1
+    Dedicated logic registers : 2
+Total registers : 2
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

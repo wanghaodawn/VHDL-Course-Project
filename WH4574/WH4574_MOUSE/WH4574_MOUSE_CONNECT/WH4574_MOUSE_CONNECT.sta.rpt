@@ -1,0 +1,1159 @@
+TimeQuest Timing Analyzer report for WH4574_MOUSE_CONNECT
+Sat Jan 04 06:45:59 2014
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Slow 1200mV 85C Model Setup Summary
+  7. Slow 1200mV 85C Model Hold Summary
+  8. Slow 1200mV 85C Model Recovery Summary
+  9. Slow 1200mV 85C Model Removal Summary
+ 10. Slow 1200mV 85C Model Minimum Pulse Width
+ 11. Clock to Output Times
+ 12. Minimum Clock to Output Times
+ 13. Slow 1200mV 0C Model Fmax Summary
+ 14. Slow 1200mV 0C Model Setup Summary
+ 15. Slow 1200mV 0C Model Hold Summary
+ 16. Slow 1200mV 0C Model Recovery Summary
+ 17. Slow 1200mV 0C Model Removal Summary
+ 18. Slow 1200mV 0C Model Minimum Pulse Width
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast 1200mV 0C Model Setup Summary
+ 22. Fast 1200mV 0C Model Hold Summary
+ 23. Fast 1200mV 0C Model Recovery Summary
+ 24. Fast 1200mV 0C Model Removal Summary
+ 25. Fast 1200mV 0C Model Minimum Pulse Width
+ 26. Clock to Output Times
+ 27. Minimum Clock to Output Times
+ 28. Multicorner Timing Analysis Summary
+ 29. Clock to Output Times
+ 30. Minimum Clock to Output Times
+ 31. Board Trace Model Assignments
+ 32. Input Transition Times
+ 33. Slow Corner Signal Integrity Metrics
+ 34. Fast Corner Signal Integrity Metrics
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                     ;
++--------------------+--------------------------------------------------+
+; Quartus II Version ; Version 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name      ; WH4574_MOUSE_CONNECT                             ;
+; Device Family      ; Cyclone III                                      ;
+; Device Name        ; EP3C10E144C8                                     ;
+; Timing Models      ; Final                                            ;
+; Delay Model        ; Combined                                         ;
+; Rise/Fall Delays   ; Enabled                                          ;
++--------------------+--------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ; < 0.1%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                 ;
++----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------+
+; Clock Name                 ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                        ;
++----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------+
+; CLK_50MHZ                  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK_50MHZ }                  ;
+; WH4574_DIV1K:inst4|CO      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { WH4574_DIV1K:inst4|CO }      ;
+; WH4574_DIV1K:inst4|COUNT2  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { WH4574_DIV1K:inst4|COUNT2 }  ;
+; WH4574_DIV2K_CTRL:inst9|CO ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { WH4574_DIV2K_CTRL:inst9|CO } ;
+; WH4574_DIV4K:inst5|COUNT2  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { WH4574_DIV4K:inst5|COUNT2 }  ;
+; WH4574_DIV4K:inst5|Q1      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { WH4574_DIV4K:inst5|Q1 }      ;
++----------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                          ;
++-------------+-----------------+----------------------------+------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name                 ; Note                                           ;
++-------------+-----------------+----------------------------+------------------------------------------------+
+; 106.16 MHz  ; 106.16 MHz      ; WH4574_DIV4K:inst5|COUNT2  ;                                                ;
+; 243.66 MHz  ; 243.66 MHz      ; CLK_50MHZ                  ;                                                ;
+; 742.39 MHz  ; 350.02 MHz      ; WH4574_DIV1K:inst4|COUNT2  ; limit due to minimum period restriction (tmin) ;
+; 1111.11 MHz ; 350.02 MHz      ; WH4574_DIV2K_CTRL:inst9|CO ; limit due to minimum period restriction (tmin) ;
++-------------+-----------------+----------------------------+------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                 ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; WH4574_DIV4K:inst5|COUNT2  ; -5.162 ; -273.067      ;
+; CLK_50MHZ                  ; -3.104 ; -76.326       ;
+; WH4574_DIV1K:inst4|COUNT2  ; -0.347 ; -0.462        ;
+; WH4574_DIV4K:inst5|Q1      ; -0.268 ; -0.268        ;
+; WH4574_DIV1K:inst4|CO      ; -0.182 ; -0.182        ;
+; WH4574_DIV2K_CTRL:inst9|CO ; 0.100  ; 0.000         ;
++----------------------------+--------+---------------+
+
+
++----------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                 ;
++----------------------------+-------+---------------+
+; Clock                      ; Slack ; End Point TNS ;
++----------------------------+-------+---------------+
+; WH4574_DIV1K:inst4|CO      ; 0.130 ; 0.000         ;
+; WH4574_DIV4K:inst5|Q1      ; 0.231 ; 0.000         ;
+; WH4574_DIV4K:inst5|COUNT2  ; 0.453 ; 0.000         ;
+; WH4574_DIV1K:inst4|COUNT2  ; 0.454 ; 0.000         ;
+; WH4574_DIV2K_CTRL:inst9|CO ; 0.483 ; 0.000         ;
+; CLK_50MHZ                  ; 0.746 ; 0.000         ;
++----------------------------+-------+---------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width                                                                                                   ;
++--------+--------------+----------------+-------+------------+----------------------------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; CCPP  ; Type       ; Clock                      ; Clock Edge ; Target                              ;
++--------+--------------+----------------+-------+------------+----------------------------+------------+-------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; 0.000 ; Port Rate  ; CLK_50MHZ                  ; Rise       ; CLK_50MHZ                           ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV1K:inst4|COUNT2  ; Rise       ; WH4574_DISPLAY8:inst|s[0]           ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV1K:inst4|COUNT2  ; Rise       ; WH4574_DISPLAY8:inst|s[1]           ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV1K:inst4|COUNT2  ; Rise       ; WH4574_DISPLAY8:inst|s[2]           ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|CO               ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[10]       ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[11]       ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[12]       ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[13]       ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[14]       ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[3]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[4]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[5]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[6]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[7]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[8]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[9]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV1K:inst4|CO      ; Rise       ; WH4574_DIV1K:inst4|COUNT2           ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|CO          ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[10]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[11]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[1]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[2]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[3]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[4]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[5]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[6]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[7]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[8]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[9]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV2K_CTRL:inst9|CO ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT2      ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|Q1      ; Rise       ; WH4574_DIV4K:inst5|COUNT2           ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[0]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[10]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[1]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[2]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[3]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[4]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[5]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[6]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[7]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[8]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[9]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|Q1               ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BAI[0]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BAI[1]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BAI[2]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BAI[3]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD0[0]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD1[0]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD1[1]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD1[2]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD1[3]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD2[1]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD2[2]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD2[3]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD3[0]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD3[1]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD3[2]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD3[3]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD5[0]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD5[1]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD5[2]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD5[3]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD6[0]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD6[1]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD6[2]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD6[3]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD7[1]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD7[2]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD7[3]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Rise       ; WH4574_MOUSE_CONNECT:inst6|CC[0]    ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Rise       ; WH4574_MOUSE_CONNECT:inst6|CC[1]    ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Rise       ; WH4574_MOUSE_CONNECT:inst6|CC[2]    ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Rise       ; WH4574_MOUSE_CONNECT:inst6|CC[3]    ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Rise       ; WH4574_MOUSE_CONNECT:inst6|CC[4]    ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[10] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[11] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[12] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[13] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[14] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[15] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[16] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[17] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[18] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[1]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[21] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[22] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[23] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[24] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[25] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[26] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[27] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[28] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[2]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[3]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[4]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[5]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[6]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[7]  ;
++--------+--------------+----------------+-------+------------+----------------------------+------------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                              ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; LED_A     ; WH4574_DIV1K:inst4|COUNT2  ; 12.060 ; 12.060 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_B     ; WH4574_DIV1K:inst4|COUNT2  ; 12.060 ; 12.060 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_C     ; WH4574_DIV1K:inst4|COUNT2  ; 12.226 ; 12.060 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_D     ; WH4574_DIV1K:inst4|COUNT2  ; 12.139 ; 12.060 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_DP    ; WH4574_DIV1K:inst4|COUNT2  ; 9.716  ; 9.559  ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_E     ; WH4574_DIV1K:inst4|COUNT2  ; 12.068 ; 12.068 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_F     ; WH4574_DIV1K:inst4|COUNT2  ; 12.001 ; 12.001 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_G     ; WH4574_DIV1K:inst4|COUNT2  ; 12.001 ; 12.001 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SA    ; WH4574_DIV1K:inst4|COUNT2  ; 8.186  ; 8.008  ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SB    ; WH4574_DIV1K:inst4|COUNT2  ; 8.161  ; 8.005  ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SC    ; WH4574_DIV1K:inst4|COUNT2  ; 7.897  ; 7.811  ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; BEEP      ; WH4574_DIV2K_CTRL:inst9|CO ; 6.292  ; 6.086  ; Rise       ; WH4574_DIV2K_CTRL:inst9|CO ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ; 6.114  ;        ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; DATA      ; WH4574_DIV4K:inst5|COUNT2  ; 9.374  ; 9.047  ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ;        ; 6.017  ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_A     ; WH4574_DIV4K:inst5|COUNT2  ; 11.982 ; 11.982 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_B     ; WH4574_DIV4K:inst5|COUNT2  ; 11.982 ; 11.982 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_C     ; WH4574_DIV4K:inst5|COUNT2  ; 12.141 ; 11.982 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_D     ; WH4574_DIV4K:inst5|COUNT2  ; 12.053 ; 11.982 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_E     ; WH4574_DIV4K:inst5|COUNT2  ; 11.990 ; 11.990 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_F     ; WH4574_DIV4K:inst5|COUNT2  ; 11.923 ; 11.923 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_G     ; WH4574_DIV4K:inst5|COUNT2  ; 11.923 ; 11.923 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                    ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; LED_A     ; WH4574_DIV1K:inst4|COUNT2  ; 8.622 ; 8.622 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_B     ; WH4574_DIV1K:inst4|COUNT2  ; 8.622 ; 8.500 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_C     ; WH4574_DIV1K:inst4|COUNT2  ; 8.622 ; 8.622 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_D     ; WH4574_DIV1K:inst4|COUNT2  ; 8.622 ; 8.622 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_DP    ; WH4574_DIV1K:inst4|COUNT2  ; 8.902 ; 8.772 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_E     ; WH4574_DIV1K:inst4|COUNT2  ; 8.615 ; 8.615 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_F     ; WH4574_DIV1K:inst4|COUNT2  ; 8.559 ; 8.559 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_G     ; WH4574_DIV1K:inst4|COUNT2  ; 8.559 ; 8.457 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SA    ; WH4574_DIV1K:inst4|COUNT2  ; 7.942 ; 7.770 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SB    ; WH4574_DIV1K:inst4|COUNT2  ; 7.919 ; 7.768 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SC    ; WH4574_DIV1K:inst4|COUNT2  ; 7.664 ; 7.581 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; BEEP      ; WH4574_DIV2K_CTRL:inst9|CO ; 6.124 ; 5.925 ; Rise       ; WH4574_DIV2K_CTRL:inst9|CO ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ; 6.022 ;       ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; DATA      ; WH4574_DIV4K:inst5|COUNT2  ; 9.083 ; 8.768 ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ;       ; 5.932 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_A     ; WH4574_DIV4K:inst5|COUNT2  ; 8.841 ; 8.841 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_B     ; WH4574_DIV4K:inst5|COUNT2  ; 8.828 ; 8.675 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_C     ; WH4574_DIV4K:inst5|COUNT2  ; 8.829 ; 8.586 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_D     ; WH4574_DIV4K:inst5|COUNT2  ; 8.841 ; 8.841 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_E     ; WH4574_DIV4K:inst5|COUNT2  ; 8.834 ; 8.834 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_F     ; WH4574_DIV4K:inst5|COUNT2  ; 8.778 ; 8.725 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_G     ; WH4574_DIV4K:inst5|COUNT2  ; 8.487 ; 8.300 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                          ;
++-------------+-----------------+----------------------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name                 ; Note                                                          ;
++-------------+-----------------+----------------------------+---------------------------------------------------------------+
+; 112.23 MHz  ; 112.23 MHz      ; WH4574_DIV4K:inst5|COUNT2  ;                                                               ;
+; 264.34 MHz  ; 250.0 MHz       ; CLK_50MHZ                  ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 828.5 MHz   ; 350.02 MHz      ; WH4574_DIV1K:inst4|COUNT2  ; limit due to minimum period restriction (tmin)                ;
+; 1242.24 MHz ; 350.02 MHz      ; WH4574_DIV2K_CTRL:inst9|CO ; limit due to minimum period restriction (tmin)                ;
++-------------+-----------------+----------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                  ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; WH4574_DIV4K:inst5|COUNT2  ; -4.715 ; -252.345      ;
+; CLK_50MHZ                  ; -2.783 ; -68.502       ;
+; WH4574_DIV1K:inst4|COUNT2  ; -0.207 ; -0.207        ;
+; WH4574_DIV4K:inst5|Q1      ; -0.199 ; -0.199        ;
+; WH4574_DIV1K:inst4|CO      ; -0.129 ; -0.129        ;
+; WH4574_DIV2K_CTRL:inst9|CO ; 0.195  ; 0.000         ;
++----------------------------+--------+---------------+
+
+
++----------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                  ;
++----------------------------+-------+---------------+
+; Clock                      ; Slack ; End Point TNS ;
++----------------------------+-------+---------------+
+; WH4574_DIV1K:inst4|CO      ; 0.107 ; 0.000         ;
+; WH4574_DIV4K:inst5|Q1      ; 0.204 ; 0.000         ;
+; WH4574_DIV1K:inst4|COUNT2  ; 0.402 ; 0.000         ;
+; WH4574_DIV4K:inst5|COUNT2  ; 0.402 ; 0.000         ;
+; WH4574_DIV2K_CTRL:inst9|CO ; 0.432 ; 0.000         ;
+; CLK_50MHZ                  ; 0.693 ; 0.000         ;
++----------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width                                                                                                    ;
++--------+--------------+----------------+-------+------------+----------------------------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; CCPP  ; Type       ; Clock                      ; Clock Edge ; Target                              ;
++--------+--------------+----------------+-------+------------+----------------------------+------------+-------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; 0.000 ; Port Rate  ; CLK_50MHZ                  ; Rise       ; CLK_50MHZ                           ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV1K:inst4|COUNT2  ; Rise       ; WH4574_DISPLAY8:inst|s[0]           ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV1K:inst4|COUNT2  ; Rise       ; WH4574_DISPLAY8:inst|s[1]           ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV1K:inst4|COUNT2  ; Rise       ; WH4574_DISPLAY8:inst|s[2]           ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|CO               ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[10]       ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[11]       ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[12]       ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[13]       ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[14]       ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[3]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[4]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[5]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[6]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[7]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[8]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[9]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV1K:inst4|CO      ; Rise       ; WH4574_DIV1K:inst4|COUNT2           ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|CO          ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[10]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[11]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[1]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[2]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[3]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[4]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[5]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[6]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[7]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[8]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[9]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV2K_CTRL:inst9|CO ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT2      ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|Q1      ; Rise       ; WH4574_DIV4K:inst5|COUNT2           ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[0]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[10]        ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[1]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[2]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[3]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[4]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[5]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[6]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[7]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[8]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[9]         ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|Q1               ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BAI[0]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BAI[1]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BAI[2]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BAI[3]   ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD0[0]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD1[0]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD1[1]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD1[2]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD1[3]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD2[1]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD2[2]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD2[3]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD3[0]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD3[1]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD3[2]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD3[3]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD5[0]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD5[1]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD5[2]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD5[3]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD6[0]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD6[1]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD6[2]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD6[3]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD7[1]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD7[2]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD7[3]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Rise       ; WH4574_MOUSE_CONNECT:inst6|CC[0]    ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Rise       ; WH4574_MOUSE_CONNECT:inst6|CC[1]    ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Rise       ; WH4574_MOUSE_CONNECT:inst6|CC[2]    ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Rise       ; WH4574_MOUSE_CONNECT:inst6|CC[3]    ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Rise       ; WH4574_MOUSE_CONNECT:inst6|CC[4]    ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[10] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[11] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[12] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[13] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[14] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[15] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[16] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[17] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[18] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[1]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[21] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[22] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[23] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[24] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[25] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[26] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[27] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[28] ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[2]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[3]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[4]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[5]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[6]  ;
+; -1.857 ; 1.000        ; 2.857          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[7]  ;
++--------+--------------+----------------+-------+------------+----------------------------+------------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                              ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; LED_A     ; WH4574_DIV1K:inst4|COUNT2  ; 11.276 ; 11.045 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_B     ; WH4574_DIV1K:inst4|COUNT2  ; 11.045 ; 11.045 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_C     ; WH4574_DIV1K:inst4|COUNT2  ; 11.562 ; 11.315 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_D     ; WH4574_DIV1K:inst4|COUNT2  ; 11.574 ; 11.262 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_DP    ; WH4574_DIV1K:inst4|COUNT2  ; 9.199  ; 8.967  ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_E     ; WH4574_DIV1K:inst4|COUNT2  ; 11.404 ; 11.057 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_F     ; WH4574_DIV1K:inst4|COUNT2  ; 11.064 ; 10.978 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_G     ; WH4574_DIV1K:inst4|COUNT2  ; 11.217 ; 11.068 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SA    ; WH4574_DIV1K:inst4|COUNT2  ; 7.854  ; 7.563  ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SB    ; WH4574_DIV1K:inst4|COUNT2  ; 7.837  ; 7.535  ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SC    ; WH4574_DIV1K:inst4|COUNT2  ; 7.575  ; 7.363  ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; BEEP      ; WH4574_DIV2K_CTRL:inst9|CO ; 6.085  ; 5.765  ; Rise       ; WH4574_DIV2K_CTRL:inst9|CO ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ; 6.028  ;        ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; DATA      ; WH4574_DIV4K:inst5|COUNT2  ; 8.994  ; 8.497  ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ;        ; 5.811  ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_A     ; WH4574_DIV4K:inst5|COUNT2  ; 11.203 ; 10.907 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_B     ; WH4574_DIV4K:inst5|COUNT2  ; 10.907 ; 10.907 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_C     ; WH4574_DIV4K:inst5|COUNT2  ; 11.421 ; 11.214 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_D     ; WH4574_DIV4K:inst5|COUNT2  ; 11.450 ; 11.175 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_E     ; WH4574_DIV4K:inst5|COUNT2  ; 11.251 ; 10.963 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_F     ; WH4574_DIV4K:inst5|COUNT2  ; 10.896 ; 10.840 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_G     ; WH4574_DIV4K:inst5|COUNT2  ; 11.130 ; 10.967 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                    ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; LED_A     ; WH4574_DIV1K:inst4|COUNT2  ; 8.074 ; 8.074 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_B     ; WH4574_DIV1K:inst4|COUNT2  ; 8.074 ; 8.039 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_C     ; WH4574_DIV1K:inst4|COUNT2  ; 8.074 ; 8.074 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_D     ; WH4574_DIV1K:inst4|COUNT2  ; 8.074 ; 8.074 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_DP    ; WH4574_DIV1K:inst4|COUNT2  ; 8.495 ; 8.272 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_E     ; WH4574_DIV1K:inst4|COUNT2  ; 8.065 ; 8.065 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_F     ; WH4574_DIV1K:inst4|COUNT2  ; 8.015 ; 8.015 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_G     ; WH4574_DIV1K:inst4|COUNT2  ; 8.015 ; 7.953 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SA    ; WH4574_DIV1K:inst4|COUNT2  ; 7.626 ; 7.345 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SB    ; WH4574_DIV1K:inst4|COUNT2  ; 7.609 ; 7.318 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SC    ; WH4574_DIV1K:inst4|COUNT2  ; 7.357 ; 7.153 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; BEEP      ; WH4574_DIV2K_CTRL:inst9|CO ; 5.928 ; 5.619 ; Rise       ; WH4574_DIV2K_CTRL:inst9|CO ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ; 5.940 ;       ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; DATA      ; WH4574_DIV4K:inst5|COUNT2  ; 8.720 ; 8.242 ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ;       ; 5.734 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_A     ; WH4574_DIV4K:inst5|COUNT2  ; 8.147 ; 8.147 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_B     ; WH4574_DIV4K:inst5|COUNT2  ; 8.147 ; 8.014 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_C     ; WH4574_DIV4K:inst5|COUNT2  ; 8.147 ; 7.946 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_D     ; WH4574_DIV4K:inst5|COUNT2  ; 8.147 ; 8.147 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_E     ; WH4574_DIV4K:inst5|COUNT2  ; 8.138 ; 8.138 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_F     ; WH4574_DIV4K:inst5|COUNT2  ; 8.088 ; 8.084 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_G     ; WH4574_DIV4K:inst5|COUNT2  ; 7.958 ; 7.705 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+
+
++-----------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                  ;
++----------------------------+--------+---------------+
+; Clock                      ; Slack  ; End Point TNS ;
++----------------------------+--------+---------------+
+; WH4574_DIV4K:inst5|COUNT2  ; -1.618 ; -73.222       ;
+; CLK_50MHZ                  ; -0.709 ; -11.993       ;
+; WH4574_DIV4K:inst5|Q1      ; 0.188  ; 0.000         ;
+; WH4574_DIV1K:inst4|CO      ; 0.237  ; 0.000         ;
+; WH4574_DIV1K:inst4|COUNT2  ; 0.421  ; 0.000         ;
+; WH4574_DIV2K_CTRL:inst9|CO ; 0.620  ; 0.000         ;
++----------------------------+--------+---------------+
+
+
++----------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                  ;
++----------------------------+-------+---------------+
+; Clock                      ; Slack ; End Point TNS ;
++----------------------------+-------+---------------+
+; WH4574_DIV1K:inst4|CO      ; 0.057 ; 0.000         ;
+; WH4574_DIV4K:inst5|Q1      ; 0.119 ; 0.000         ;
+; WH4574_DIV4K:inst5|COUNT2  ; 0.184 ; 0.000         ;
+; WH4574_DIV1K:inst4|COUNT2  ; 0.187 ; 0.000         ;
+; WH4574_DIV2K_CTRL:inst9|CO ; 0.202 ; 0.000         ;
+; CLK_50MHZ                  ; 0.298 ; 0.000         ;
++----------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width                                                                                                    ;
++--------+--------------+----------------+-------+------------+----------------------------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; CCPP  ; Type       ; Clock                      ; Clock Edge ; Target                              ;
++--------+--------------+----------------+-------+------------+----------------------------+------------+-------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; 0.000 ; Port Rate  ; CLK_50MHZ                  ; Rise       ; CLK_50MHZ                           ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV1K:inst4|COUNT2  ; Rise       ; WH4574_DISPLAY8:inst|s[0]           ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV1K:inst4|COUNT2  ; Rise       ; WH4574_DISPLAY8:inst|s[1]           ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV1K:inst4|COUNT2  ; Rise       ; WH4574_DISPLAY8:inst|s[2]           ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|CO               ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[10]       ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[11]       ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[12]       ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[13]       ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[14]       ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[3]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[4]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[5]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[6]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[7]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[8]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV1K:inst4|COUNT1[9]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV1K:inst4|CO      ; Rise       ; WH4574_DIV1K:inst4|COUNT2           ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|CO          ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[10]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[11]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[1]   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[2]   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[3]   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[4]   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[5]   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[6]   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[7]   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[8]   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT1[9]   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV2K_CTRL:inst9|CO ; Rise       ; WH4574_DIV2K_CTRL:inst9|COUNT2      ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|Q1      ; Rise       ; WH4574_DIV4K:inst5|COUNT2           ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[0]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[10]        ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[1]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[2]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[3]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[4]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[5]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[6]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[7]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[8]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|COUNT[9]         ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; CLK_50MHZ                  ; Rise       ; WH4574_DIV4K:inst5|Q1               ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BAI[0]   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BAI[1]   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BAI[2]   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BAI[3]   ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD0[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD1[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD1[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD1[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD1[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD2[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD2[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD2[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD3[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD3[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD3[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD3[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD5[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD5[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD5[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD5[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD6[0]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD6[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD6[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD6[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD7[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD7[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|BCD7[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Rise       ; WH4574_MOUSE_CONNECT:inst6|CC[0]    ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Rise       ; WH4574_MOUSE_CONNECT:inst6|CC[1]    ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Rise       ; WH4574_MOUSE_CONNECT:inst6|CC[2]    ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Rise       ; WH4574_MOUSE_CONNECT:inst6|CC[3]    ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Rise       ; WH4574_MOUSE_CONNECT:inst6|CC[4]    ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[10] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[11] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[12] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[13] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[14] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[15] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[16] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[17] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[18] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[1]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[21] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[22] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[23] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[24] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[25] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[26] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[27] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[28] ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[2]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[3]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[4]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[5]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[6]  ;
+; -1.000 ; 1.000        ; 2.000          ; 0.000 ; Min Period ; WH4574_DIV4K:inst5|COUNT2  ; Fall       ; WH4574_MOUSE_CONNECT:inst6|DAT0[7]  ;
++--------+--------------+----------------+-------+------------+----------------------------+------------+-------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                            ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; LED_A     ; WH4574_DIV1K:inst4|COUNT2  ; 6.194 ; 6.194 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_B     ; WH4574_DIV1K:inst4|COUNT2  ; 6.194 ; 6.194 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_C     ; WH4574_DIV1K:inst4|COUNT2  ; 6.194 ; 6.194 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_D     ; WH4574_DIV1K:inst4|COUNT2  ; 6.194 ; 6.194 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_DP    ; WH4574_DIV1K:inst4|COUNT2  ; 4.518 ; 4.706 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_E     ; WH4574_DIV1K:inst4|COUNT2  ; 6.160 ; 6.160 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_F     ; WH4574_DIV1K:inst4|COUNT2  ; 6.175 ; 6.175 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_G     ; WH4574_DIV1K:inst4|COUNT2  ; 6.175 ; 6.175 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SA    ; WH4574_DIV1K:inst4|COUNT2  ; 3.742 ; 3.870 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SB    ; WH4574_DIV1K:inst4|COUNT2  ; 3.702 ; 3.844 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SC    ; WH4574_DIV1K:inst4|COUNT2  ; 3.615 ; 3.738 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; BEEP      ; WH4574_DIV2K_CTRL:inst9|CO ; 2.929 ; 3.080 ; Rise       ; WH4574_DIV2K_CTRL:inst9|CO ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ; 3.142 ;       ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; DATA      ; WH4574_DIV4K:inst5|COUNT2  ; 4.280 ; 4.473 ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ;       ; 3.342 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_A     ; WH4574_DIV4K:inst5|COUNT2  ; 6.339 ; 6.339 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_B     ; WH4574_DIV4K:inst5|COUNT2  ; 6.339 ; 6.339 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_C     ; WH4574_DIV4K:inst5|COUNT2  ; 6.339 ; 6.339 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_D     ; WH4574_DIV4K:inst5|COUNT2  ; 6.339 ; 6.339 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_E     ; WH4574_DIV4K:inst5|COUNT2  ; 6.305 ; 6.305 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_F     ; WH4574_DIV4K:inst5|COUNT2  ; 6.320 ; 6.320 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_G     ; WH4574_DIV4K:inst5|COUNT2  ; 6.320 ; 6.320 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                    ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; LED_A     ; WH4574_DIV1K:inst4|COUNT2  ; 4.089 ; 4.155 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_B     ; WH4574_DIV1K:inst4|COUNT2  ; 3.925 ; 3.967 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_C     ; WH4574_DIV1K:inst4|COUNT2  ; 3.990 ; 4.067 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_D     ; WH4574_DIV1K:inst4|COUNT2  ; 4.155 ; 4.155 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_DP    ; WH4574_DIV1K:inst4|COUNT2  ; 4.134 ; 4.339 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_E     ; WH4574_DIV1K:inst4|COUNT2  ; 4.132 ; 4.133 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_F     ; WH4574_DIV1K:inst4|COUNT2  ; 4.003 ; 4.068 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_G     ; WH4574_DIV1K:inst4|COUNT2  ; 3.872 ; 3.943 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SA    ; WH4574_DIV1K:inst4|COUNT2  ; 3.638 ; 3.760 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SB    ; WH4574_DIV1K:inst4|COUNT2  ; 3.599 ; 3.736 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SC    ; WH4574_DIV1K:inst4|COUNT2  ; 3.515 ; 3.634 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; BEEP      ; WH4574_DIV2K_CTRL:inst9|CO ; 2.858 ; 3.003 ; Rise       ; WH4574_DIV2K_CTRL:inst9|CO ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ; 3.105 ;       ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; DATA      ; WH4574_DIV4K:inst5|COUNT2  ; 4.153 ; 4.338 ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ;       ; 3.299 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_A     ; WH4574_DIV4K:inst5|COUNT2  ; 4.322 ; 4.411 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_B     ; WH4574_DIV4K:inst5|COUNT2  ; 4.113 ; 4.200 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_C     ; WH4574_DIV4K:inst5|COUNT2  ; 4.101 ; 4.178 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_D     ; WH4574_DIV4K:inst5|COUNT2  ; 4.377 ; 4.417 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_E     ; WH4574_DIV4K:inst5|COUNT2  ; 4.277 ; 4.387 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_F     ; WH4574_DIV4K:inst5|COUNT2  ; 4.141 ; 4.237 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_G     ; WH4574_DIV4K:inst5|COUNT2  ; 3.983 ; 4.054 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                       ;
++-----------------------------+----------+-------+----------+---------+---------------------+
+; Clock                       ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack            ; -5.162   ; 0.0   ; 0.0      ; 0.0     ; -3.000              ;
+;  CLK_50MHZ                  ; -3.104   ; 0.298 ; N/A      ; N/A     ; N/A                 ;
+;  WH4574_DIV1K:inst4|CO      ; -0.182   ; 0.057 ; N/A      ; N/A     ; N/A                 ;
+;  WH4574_DIV1K:inst4|COUNT2  ; -0.347   ; 0.187 ; N/A      ; N/A     ; N/A                 ;
+;  WH4574_DIV2K_CTRL:inst9|CO ; 0.100    ; 0.202 ; N/A      ; N/A     ; N/A                 ;
+;  WH4574_DIV4K:inst5|COUNT2  ; -5.162   ; 0.184 ; N/A      ; N/A     ; N/A                 ;
+;  WH4574_DIV4K:inst5|Q1      ; -0.268   ; 0.119 ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS             ; -350.305 ; 0.0   ; 0.0      ; 0.0     ; N/A                 ;
+;  CLK_50MHZ                  ; -76.326  ; 0.000 ; N/A      ; N/A     ; N/A                 ;
+;  WH4574_DIV1K:inst4|CO      ; -0.182   ; 0.000 ; N/A      ; N/A     ; N/A                 ;
+;  WH4574_DIV1K:inst4|COUNT2  ; -0.462   ; 0.000 ; N/A      ; N/A     ; N/A                 ;
+;  WH4574_DIV2K_CTRL:inst9|CO ; 0.000    ; 0.000 ; N/A      ; N/A     ; N/A                 ;
+;  WH4574_DIV4K:inst5|COUNT2  ; -273.067 ; 0.000 ; N/A      ; N/A     ; N/A                 ;
+;  WH4574_DIV4K:inst5|Q1      ; -0.268   ; 0.000 ; N/A      ; N/A     ; N/A                 ;
++-----------------------------+----------+-------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                              ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise   ; Fall   ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+; LED_A     ; WH4574_DIV1K:inst4|COUNT2  ; 12.060 ; 12.060 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_B     ; WH4574_DIV1K:inst4|COUNT2  ; 12.060 ; 12.060 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_C     ; WH4574_DIV1K:inst4|COUNT2  ; 12.226 ; 12.060 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_D     ; WH4574_DIV1K:inst4|COUNT2  ; 12.139 ; 12.060 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_DP    ; WH4574_DIV1K:inst4|COUNT2  ; 9.716  ; 9.559  ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_E     ; WH4574_DIV1K:inst4|COUNT2  ; 12.068 ; 12.068 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_F     ; WH4574_DIV1K:inst4|COUNT2  ; 12.001 ; 12.001 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_G     ; WH4574_DIV1K:inst4|COUNT2  ; 12.001 ; 12.001 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SA    ; WH4574_DIV1K:inst4|COUNT2  ; 8.186  ; 8.008  ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SB    ; WH4574_DIV1K:inst4|COUNT2  ; 8.161  ; 8.005  ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SC    ; WH4574_DIV1K:inst4|COUNT2  ; 7.897  ; 7.811  ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; BEEP      ; WH4574_DIV2K_CTRL:inst9|CO ; 6.292  ; 6.086  ; Rise       ; WH4574_DIV2K_CTRL:inst9|CO ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ; 6.114  ;        ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; DATA      ; WH4574_DIV4K:inst5|COUNT2  ; 9.374  ; 9.047  ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ;        ; 6.017  ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_A     ; WH4574_DIV4K:inst5|COUNT2  ; 11.982 ; 11.982 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_B     ; WH4574_DIV4K:inst5|COUNT2  ; 11.982 ; 11.982 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_C     ; WH4574_DIV4K:inst5|COUNT2  ; 12.141 ; 11.982 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_D     ; WH4574_DIV4K:inst5|COUNT2  ; 12.053 ; 11.982 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_E     ; WH4574_DIV4K:inst5|COUNT2  ; 11.990 ; 11.990 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_F     ; WH4574_DIV4K:inst5|COUNT2  ; 11.923 ; 11.923 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_G     ; WH4574_DIV4K:inst5|COUNT2  ; 11.923 ; 11.923 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
++-----------+----------------------------+--------+--------+------------+----------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                    ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; Data Port ; Clock Port                 ; Rise  ; Fall  ; Clock Edge ; Clock Reference            ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+; LED_A     ; WH4574_DIV1K:inst4|COUNT2  ; 4.089 ; 4.155 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_B     ; WH4574_DIV1K:inst4|COUNT2  ; 3.925 ; 3.967 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_C     ; WH4574_DIV1K:inst4|COUNT2  ; 3.990 ; 4.067 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_D     ; WH4574_DIV1K:inst4|COUNT2  ; 4.155 ; 4.155 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_DP    ; WH4574_DIV1K:inst4|COUNT2  ; 4.134 ; 4.339 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_E     ; WH4574_DIV1K:inst4|COUNT2  ; 4.132 ; 4.133 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_F     ; WH4574_DIV1K:inst4|COUNT2  ; 4.003 ; 4.068 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_G     ; WH4574_DIV1K:inst4|COUNT2  ; 3.872 ; 3.943 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SA    ; WH4574_DIV1K:inst4|COUNT2  ; 3.638 ; 3.760 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SB    ; WH4574_DIV1K:inst4|COUNT2  ; 3.599 ; 3.736 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; LED_SC    ; WH4574_DIV1K:inst4|COUNT2  ; 3.515 ; 3.634 ; Rise       ; WH4574_DIV1K:inst4|COUNT2  ;
+; BEEP      ; WH4574_DIV2K_CTRL:inst9|CO ; 2.858 ; 3.003 ; Rise       ; WH4574_DIV2K_CTRL:inst9|CO ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ; 3.105 ;       ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; DATA      ; WH4574_DIV4K:inst5|COUNT2  ; 4.153 ; 4.338 ; Rise       ; WH4574_DIV4K:inst5|COUNT2  ;
+; CLK1250HZ ; WH4574_DIV4K:inst5|COUNT2  ;       ; 3.299 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_A     ; WH4574_DIV4K:inst5|COUNT2  ; 4.322 ; 4.411 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_B     ; WH4574_DIV4K:inst5|COUNT2  ; 4.113 ; 4.200 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_C     ; WH4574_DIV4K:inst5|COUNT2  ; 4.101 ; 4.178 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_D     ; WH4574_DIV4K:inst5|COUNT2  ; 4.377 ; 4.417 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_E     ; WH4574_DIV4K:inst5|COUNT2  ; 4.277 ; 4.387 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_F     ; WH4574_DIV4K:inst5|COUNT2  ; 4.141 ; 4.237 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
+; LED_G     ; WH4574_DIV4K:inst5|COUNT2  ; 3.983 ; 4.054 ; Fall       ; WH4574_DIV4K:inst5|COUNT2  ;
++-----------+----------------------------+-------+-------+------------+----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+; DATA          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED_SA        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED_SB        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED_SC        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED_A         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED_B         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED_C         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED_D         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED_E         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED_F         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED_G         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; LED_DP        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; CLK1250HZ     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; BEEP          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; CLK_50MHZ               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; DATA          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.84e-007 V                  ; 2.35 V              ; -0.0105 V           ; 0.143 V                              ; 0.041 V                              ; 4.81e-010 s                 ; 4.81e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.84e-007 V                 ; 2.35 V             ; -0.0105 V          ; 0.143 V                             ; 0.041 V                             ; 4.81e-010 s                ; 4.81e-010 s                ; Yes                       ; Yes                       ;
+; LED_SA        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.84e-007 V                  ; 2.35 V              ; -0.0105 V           ; 0.143 V                              ; 0.041 V                              ; 4.81e-010 s                 ; 4.81e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.84e-007 V                 ; 2.35 V             ; -0.0105 V          ; 0.143 V                             ; 0.041 V                             ; 4.81e-010 s                ; 4.81e-010 s                ; Yes                       ; Yes                       ;
+; LED_SB        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.84e-007 V                  ; 2.35 V              ; -0.0105 V           ; 0.143 V                              ; 0.041 V                              ; 4.81e-010 s                 ; 4.81e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.84e-007 V                 ; 2.35 V             ; -0.0105 V          ; 0.143 V                             ; 0.041 V                             ; 4.81e-010 s                ; 4.81e-010 s                ; Yes                       ; Yes                       ;
+; LED_SC        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.84e-007 V                  ; 2.35 V              ; -0.0105 V           ; 0.143 V                              ; 0.041 V                              ; 4.81e-010 s                 ; 4.81e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.84e-007 V                 ; 2.35 V             ; -0.0105 V          ; 0.143 V                             ; 0.041 V                             ; 4.81e-010 s                ; 4.81e-010 s                ; Yes                       ; Yes                       ;
+; LED_A         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.84e-007 V                  ; 2.35 V              ; -0.0105 V           ; 0.143 V                              ; 0.041 V                              ; 4.81e-010 s                 ; 4.81e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.84e-007 V                 ; 2.35 V             ; -0.0105 V          ; 0.143 V                             ; 0.041 V                             ; 4.81e-010 s                ; 4.81e-010 s                ; Yes                       ; Yes                       ;
+; LED_B         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.84e-007 V                  ; 2.35 V              ; -0.0105 V           ; 0.143 V                              ; 0.041 V                              ; 4.81e-010 s                 ; 4.81e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.84e-007 V                 ; 2.35 V             ; -0.0105 V          ; 0.143 V                             ; 0.041 V                             ; 4.81e-010 s                ; 4.81e-010 s                ; Yes                       ; Yes                       ;
+; LED_C         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.84e-007 V                  ; 2.35 V              ; -0.0105 V           ; 0.143 V                              ; 0.041 V                              ; 4.81e-010 s                 ; 4.81e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.84e-007 V                 ; 2.35 V             ; -0.0105 V          ; 0.143 V                             ; 0.041 V                             ; 4.81e-010 s                ; 4.81e-010 s                ; Yes                       ; Yes                       ;
+; LED_D         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.84e-007 V                  ; 2.35 V              ; -0.0105 V           ; 0.143 V                              ; 0.041 V                              ; 4.81e-010 s                 ; 4.81e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.84e-007 V                 ; 2.35 V             ; -0.0105 V          ; 0.143 V                             ; 0.041 V                             ; 4.81e-010 s                ; 4.81e-010 s                ; Yes                       ; Yes                       ;
+; LED_E         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.84e-007 V                  ; 2.35 V              ; -0.0105 V           ; 0.143 V                              ; 0.041 V                              ; 4.81e-010 s                 ; 4.81e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.84e-007 V                 ; 2.35 V             ; -0.0105 V          ; 0.143 V                             ; 0.041 V                             ; 4.81e-010 s                ; 4.81e-010 s                ; Yes                       ; Yes                       ;
+; LED_F         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.84e-007 V                  ; 2.35 V              ; -0.0105 V           ; 0.143 V                              ; 0.041 V                              ; 4.81e-010 s                 ; 4.81e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.84e-007 V                 ; 2.35 V             ; -0.0105 V          ; 0.143 V                             ; 0.041 V                             ; 4.81e-010 s                ; 4.81e-010 s                ; Yes                       ; Yes                       ;
+; LED_G         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.84e-007 V                  ; 2.35 V              ; -0.0105 V           ; 0.143 V                              ; 0.041 V                              ; 4.81e-010 s                 ; 4.81e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.84e-007 V                 ; 2.35 V             ; -0.0105 V          ; 0.143 V                             ; 0.041 V                             ; 4.81e-010 s                ; 4.81e-010 s                ; Yes                       ; Yes                       ;
+; LED_DP        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.84e-007 V                  ; 2.35 V              ; -0.0105 V           ; 0.143 V                              ; 0.041 V                              ; 4.81e-010 s                 ; 4.81e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.84e-007 V                 ; 2.35 V             ; -0.0105 V          ; 0.143 V                             ; 0.041 V                             ; 4.81e-010 s                ; 4.81e-010 s                ; Yes                       ; Yes                       ;
+; CLK1250HZ     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.84e-007 V                  ; 2.33 V              ; -0.00215 V          ; 0.091 V                              ; 0.057 V                              ; 3.77e-009 s                 ; 3.49e-009 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.84e-007 V                 ; 2.33 V             ; -0.00215 V         ; 0.091 V                             ; 0.057 V                             ; 3.77e-009 s                ; 3.49e-009 s                ; Yes                       ; Yes                       ;
+; BEEP          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.84e-007 V                  ; 2.35 V              ; -0.0105 V           ; 0.143 V                              ; 0.041 V                              ; 4.81e-010 s                 ; 4.81e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.84e-007 V                 ; 2.35 V             ; -0.0105 V          ; 0.143 V                             ; 0.041 V                             ; 4.81e-010 s                ; 4.81e-010 s                ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.53e-007 V                  ; 2.35 V              ; -0.00333 V          ; 0.096 V                              ; 0.006 V                              ; 4.5e-010 s                  ; 3.85e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 1.53e-007 V                 ; 2.35 V             ; -0.00333 V         ; 0.096 V                             ; 0.006 V                             ; 4.5e-010 s                 ; 3.85e-010 s                ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.51e-007 V                  ; 2.34 V              ; -0.00733 V          ; 0.108 V                              ; 0.027 V                              ; 6.58e-010 s                 ; 8.21e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 2.51e-007 V                 ; 2.34 V             ; -0.00733 V         ; 0.108 V                             ; 0.027 V                             ; 6.58e-010 s                ; 8.21e-010 s                ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; DATA          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-008 V                  ; 2.71 V              ; -0.0357 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-010 s                 ; 2.69e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-008 V                 ; 2.71 V             ; -0.0357 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-010 s                ; 2.69e-010 s                ; Yes                       ; Yes                       ;
+; LED_SA        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-008 V                  ; 2.71 V              ; -0.0357 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-010 s                 ; 2.69e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-008 V                 ; 2.71 V             ; -0.0357 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-010 s                ; 2.69e-010 s                ; Yes                       ; Yes                       ;
+; LED_SB        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-008 V                  ; 2.71 V              ; -0.0357 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-010 s                 ; 2.69e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-008 V                 ; 2.71 V             ; -0.0357 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-010 s                ; 2.69e-010 s                ; Yes                       ; Yes                       ;
+; LED_SC        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-008 V                  ; 2.71 V              ; -0.0357 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-010 s                 ; 2.69e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-008 V                 ; 2.71 V             ; -0.0357 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-010 s                ; 2.69e-010 s                ; Yes                       ; Yes                       ;
+; LED_A         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-008 V                  ; 2.71 V              ; -0.0357 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-010 s                 ; 2.69e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-008 V                 ; 2.71 V             ; -0.0357 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-010 s                ; 2.69e-010 s                ; Yes                       ; Yes                       ;
+; LED_B         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-008 V                  ; 2.71 V              ; -0.0357 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-010 s                 ; 2.69e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-008 V                 ; 2.71 V             ; -0.0357 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-010 s                ; 2.69e-010 s                ; Yes                       ; Yes                       ;
+; LED_C         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-008 V                  ; 2.71 V              ; -0.0357 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-010 s                 ; 2.69e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-008 V                 ; 2.71 V             ; -0.0357 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-010 s                ; 2.69e-010 s                ; Yes                       ; Yes                       ;
+; LED_D         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-008 V                  ; 2.71 V              ; -0.0357 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-010 s                 ; 2.69e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-008 V                 ; 2.71 V             ; -0.0357 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-010 s                ; 2.69e-010 s                ; Yes                       ; Yes                       ;
+; LED_E         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-008 V                  ; 2.71 V              ; -0.0357 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-010 s                 ; 2.69e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-008 V                 ; 2.71 V             ; -0.0357 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-010 s                ; 2.69e-010 s                ; Yes                       ; Yes                       ;
+; LED_F         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-008 V                  ; 2.71 V              ; -0.0357 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-010 s                 ; 2.69e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-008 V                 ; 2.71 V             ; -0.0357 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-010 s                ; 2.69e-010 s                ; Yes                       ; Yes                       ;
+; LED_G         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-008 V                  ; 2.71 V              ; -0.0357 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-010 s                 ; 2.69e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-008 V                 ; 2.71 V             ; -0.0357 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-010 s                ; 2.69e-010 s                ; Yes                       ; Yes                       ;
+; LED_DP        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-008 V                  ; 2.71 V              ; -0.0357 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-010 s                 ; 2.69e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-008 V                 ; 2.71 V             ; -0.0357 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-010 s                ; 2.69e-010 s                ; Yes                       ; Yes                       ;
+; CLK1250HZ     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-008 V                  ; 2.64 V              ; -0.0115 V           ; 0.204 V                              ; 0.12 V                               ; 2.38e-009 s                 ; 2.23e-009 s                 ; No                         ; Yes                        ; 2.62 V                      ; 4.02e-008 V                 ; 2.64 V             ; -0.0115 V          ; 0.204 V                             ; 0.12 V                              ; 2.38e-009 s                ; 2.23e-009 s                ; No                        ; Yes                       ;
+; BEEP          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-008 V                  ; 2.71 V              ; -0.0357 V           ; 0.174 V                              ; 0.098 V                              ; 2.73e-010 s                 ; 2.69e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-008 V                 ; 2.71 V             ; -0.0357 V          ; 0.174 V                             ; 0.098 V                             ; 2.73e-010 s                ; 2.69e-010 s                ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.2e-008 V                   ; 2.74 V              ; -0.061 V            ; 0.159 V                              ; 0.078 V                              ; 2.7e-010 s                  ; 2.2e-010 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.2e-008 V                  ; 2.74 V             ; -0.061 V           ; 0.159 V                             ; 0.078 V                             ; 2.7e-010 s                 ; 2.2e-010 s                 ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.52e-008 V                  ; 2.7 V               ; -0.0119 V           ; 0.274 V                              ; 0.034 V                              ; 3.18e-010 s                 ; 4.97e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 3.52e-008 V                 ; 2.7 V              ; -0.0119 V          ; 0.274 V                             ; 0.034 V                             ; 3.18e-010 s                ; 4.97e-010 s                ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                     ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; From Clock                 ; To Clock                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; CLK_50MHZ                  ; CLK_50MHZ                  ; 511      ; 0        ; 0        ; 0        ;
+; WH4574_DIV1K:inst4|COUNT2  ; WH4574_DIV1K:inst4|CO      ; 1        ; 1        ; 0        ; 0        ;
+; WH4574_DIV1K:inst4|COUNT2  ; WH4574_DIV1K:inst4|COUNT2  ; 6        ; 0        ; 0        ; 0        ;
+; WH4574_DIV2K_CTRL:inst9|CO ; WH4574_DIV2K_CTRL:inst9|CO ; 1        ; 0        ; 0        ; 0        ;
+; WH4574_DIV4K:inst5|COUNT2  ; WH4574_DIV4K:inst5|COUNT2  ; 51       ; 19       ; 95       ; 1019     ;
+; WH4574_DIV4K:inst5|COUNT2  ; WH4574_DIV4K:inst5|Q1      ; 1        ; 1        ; 0        ; 0        ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                      ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; From Clock                 ; To Clock                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+; CLK_50MHZ                  ; CLK_50MHZ                  ; 511      ; 0        ; 0        ; 0        ;
+; WH4574_DIV1K:inst4|COUNT2  ; WH4574_DIV1K:inst4|CO      ; 1        ; 1        ; 0        ; 0        ;
+; WH4574_DIV1K:inst4|COUNT2  ; WH4574_DIV1K:inst4|COUNT2  ; 6        ; 0        ; 0        ; 0        ;
+; WH4574_DIV2K_CTRL:inst9|CO ; WH4574_DIV2K_CTRL:inst9|CO ; 1        ; 0        ; 0        ; 0        ;
+; WH4574_DIV4K:inst5|COUNT2  ; WH4574_DIV4K:inst5|COUNT2  ; 51       ; 19       ; 95       ; 1019     ;
+; WH4574_DIV4K:inst5|COUNT2  ; WH4574_DIV4K:inst5|Q1      ; 1        ; 1        ; 0        ; 0        ;
++----------------------------+----------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design.
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design.
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 14    ; 14   ;
+; Unconstrained Output Port Paths ; 191   ; 191  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Sat Jan 04 06:45:51 2014
+Info: Command: quartus_sta WH4574_MOUSE_CONNECT -c WH4574_MOUSE_CONNECT
+Info: qsta_default_script.tcl version: #3
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Core supply voltage is 1.2V
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Critical Warning: Synopsys Design Constraints File file not found: 'WH4574_MOUSE_CONNECT.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name WH4574_DIV4K:inst5|COUNT2 WH4574_DIV4K:inst5|COUNT2
+    Info: create_clock -period 1.000 -name WH4574_DIV4K:inst5|Q1 WH4574_DIV4K:inst5|Q1
+    Info: create_clock -period 1.000 -name CLK_50MHZ CLK_50MHZ
+    Info: create_clock -period 1.000 -name WH4574_DIV1K:inst4|COUNT2 WH4574_DIV1K:inst4|COUNT2
+    Info: create_clock -period 1.000 -name WH4574_DIV1K:inst4|CO WH4574_DIV1K:inst4|CO
+    Info: create_clock -period 1.000 -name WH4574_DIV2K_CTRL:inst9|CO WH4574_DIV2K_CTRL:inst9|CO
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Rise) to WH4574_DIV4K:inst5|COUNT2 (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Fall) to WH4574_DIV4K:inst5|COUNT2 (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Rise) to WH4574_DIV4K:inst5|COUNT2 (Fall) (setup and hold)
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Fall) to WH4574_DIV4K:inst5|COUNT2 (Fall) (setup and hold)
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Rise) to WH4574_DIV4K:inst5|Q1 (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Fall) to WH4574_DIV4K:inst5|Q1 (Rise) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV4K:inst5|Q1 (Rise) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV4K:inst5|Q1 (Fall) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to CLK_50MHZ (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Rise) to WH4574_DIV1K:inst4|COUNT2 (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Fall) to WH4574_DIV1K:inst4|COUNT2 (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Rise) to WH4574_DIV1K:inst4|COUNT2 (Fall) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Fall) to WH4574_DIV1K:inst4|COUNT2 (Fall) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV1K:inst4|CO (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Rise) to WH4574_DIV1K:inst4|CO (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Fall) to WH4574_DIV1K:inst4|CO (Rise) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV1K:inst4|CO (Fall) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV2K_CTRL:inst9|CO (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV2K_CTRL:inst9|CO (Rise) to WH4574_DIV2K_CTRL:inst9|CO (Rise) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV2K_CTRL:inst9|CO (Fall) (setup and hold)
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -5.162
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -5.162      -273.067 WH4574_DIV4K:inst5|COUNT2 
+    Info:    -3.104       -76.326 CLK_50MHZ 
+    Info:    -0.347        -0.462 WH4574_DIV1K:inst4|COUNT2 
+    Info:    -0.268        -0.268 WH4574_DIV4K:inst5|Q1 
+    Info:    -0.182        -0.182 WH4574_DIV1K:inst4|CO 
+    Info:     0.100         0.000 WH4574_DIV2K_CTRL:inst9|CO 
+Info: Worst-case hold slack is 0.130
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.130         0.000 WH4574_DIV1K:inst4|CO 
+    Info:     0.231         0.000 WH4574_DIV4K:inst5|Q1 
+    Info:     0.453         0.000 WH4574_DIV4K:inst5|COUNT2 
+    Info:     0.454         0.000 WH4574_DIV1K:inst4|COUNT2 
+    Info:     0.483         0.000 WH4574_DIV2K_CTRL:inst9|CO 
+    Info:     0.746         0.000 CLK_50MHZ 
+Info: No recovery paths to report
+Info: No removal paths to report
+Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
+Info: The Metastability Analysis global option is set to OFF.
+Info: No synchronizer chains to report.
+Info: Analyzing Slow 1200mV 0C Model
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Rise) to WH4574_DIV4K:inst5|COUNT2 (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Fall) to WH4574_DIV4K:inst5|COUNT2 (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Rise) to WH4574_DIV4K:inst5|COUNT2 (Fall) (setup and hold)
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Fall) to WH4574_DIV4K:inst5|COUNT2 (Fall) (setup and hold)
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Rise) to WH4574_DIV4K:inst5|Q1 (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Fall) to WH4574_DIV4K:inst5|Q1 (Rise) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV4K:inst5|Q1 (Rise) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV4K:inst5|Q1 (Fall) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to CLK_50MHZ (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Rise) to WH4574_DIV1K:inst4|COUNT2 (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Fall) to WH4574_DIV1K:inst4|COUNT2 (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Rise) to WH4574_DIV1K:inst4|COUNT2 (Fall) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Fall) to WH4574_DIV1K:inst4|COUNT2 (Fall) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV1K:inst4|CO (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Rise) to WH4574_DIV1K:inst4|CO (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Fall) to WH4574_DIV1K:inst4|CO (Rise) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV1K:inst4|CO (Fall) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV2K_CTRL:inst9|CO (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV2K_CTRL:inst9|CO (Rise) to WH4574_DIV2K_CTRL:inst9|CO (Rise) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV2K_CTRL:inst9|CO (Fall) (setup and hold)
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -4.715
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -4.715      -252.345 WH4574_DIV4K:inst5|COUNT2 
+    Info:    -2.783       -68.502 CLK_50MHZ 
+    Info:    -0.207        -0.207 WH4574_DIV1K:inst4|COUNT2 
+    Info:    -0.199        -0.199 WH4574_DIV4K:inst5|Q1 
+    Info:    -0.129        -0.129 WH4574_DIV1K:inst4|CO 
+    Info:     0.195         0.000 WH4574_DIV2K_CTRL:inst9|CO 
+Info: Worst-case hold slack is 0.107
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.107         0.000 WH4574_DIV1K:inst4|CO 
+    Info:     0.204         0.000 WH4574_DIV4K:inst5|Q1 
+    Info:     0.402         0.000 WH4574_DIV1K:inst4|COUNT2 
+    Info:     0.402         0.000 WH4574_DIV4K:inst5|COUNT2 
+    Info:     0.432         0.000 WH4574_DIV2K_CTRL:inst9|CO 
+    Info:     0.693         0.000 CLK_50MHZ 
+Info: No recovery paths to report
+Info: No removal paths to report
+Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
+Info: The Metastability Analysis global option is set to OFF.
+Info: No synchronizer chains to report.
+Info: Analyzing Fast 1200mV 0C Model
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Critical Warning: The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Rise) to WH4574_DIV4K:inst5|COUNT2 (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Fall) to WH4574_DIV4K:inst5|COUNT2 (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Rise) to WH4574_DIV4K:inst5|COUNT2 (Fall) (setup and hold)
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Fall) to WH4574_DIV4K:inst5|COUNT2 (Fall) (setup and hold)
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Rise) to WH4574_DIV4K:inst5|Q1 (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV4K:inst5|COUNT2 (Fall) to WH4574_DIV4K:inst5|Q1 (Rise) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV4K:inst5|Q1 (Rise) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV4K:inst5|Q1 (Fall) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to CLK_50MHZ (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Rise) to WH4574_DIV1K:inst4|COUNT2 (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Fall) to WH4574_DIV1K:inst4|COUNT2 (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Rise) to WH4574_DIV1K:inst4|COUNT2 (Fall) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Fall) to WH4574_DIV1K:inst4|COUNT2 (Fall) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV1K:inst4|CO (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Rise) to WH4574_DIV1K:inst4|CO (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV1K:inst4|COUNT2 (Fall) to WH4574_DIV1K:inst4|CO (Rise) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV1K:inst4|CO (Fall) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV2K_CTRL:inst9|CO (Rise) (setup and hold)
+    Critical Warning: From WH4574_DIV2K_CTRL:inst9|CO (Rise) to WH4574_DIV2K_CTRL:inst9|CO (Rise) (setup and hold)
+    Critical Warning: From CLK_50MHZ (Rise) to WH4574_DIV2K_CTRL:inst9|CO (Fall) (setup and hold)
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -1.618
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.618       -73.222 WH4574_DIV4K:inst5|COUNT2 
+    Info:    -0.709       -11.993 CLK_50MHZ 
+    Info:     0.188         0.000 WH4574_DIV4K:inst5|Q1 
+    Info:     0.237         0.000 WH4574_DIV1K:inst4|CO 
+    Info:     0.421         0.000 WH4574_DIV1K:inst4|COUNT2 
+    Info:     0.620         0.000 WH4574_DIV2K_CTRL:inst9|CO 
+Info: Worst-case hold slack is 0.057
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.057         0.000 WH4574_DIV1K:inst4|CO 
+    Info:     0.119         0.000 WH4574_DIV4K:inst5|Q1 
+    Info:     0.184         0.000 WH4574_DIV4K:inst5|COUNT2 
+    Info:     0.187         0.000 WH4574_DIV1K:inst4|COUNT2 
+    Info:     0.202         0.000 WH4574_DIV2K_CTRL:inst9|CO 
+    Info:     0.298         0.000 CLK_50MHZ 
+Info: No recovery paths to report
+Info: No removal paths to report
+Critical Warning: Found minimum pulse width or period violations. See Report Minimum Pulse Width for details.
+Info: The Metastability Analysis global option is set to OFF.
+Info: No synchronizer chains to report.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 70 warnings
+    Info: Peak virtual memory: 251 megabytes
+    Info: Processing ended: Sat Jan 04 06:45:59 2014
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:05
+
+

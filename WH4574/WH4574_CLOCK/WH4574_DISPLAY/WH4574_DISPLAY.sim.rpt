@@ -1,0 +1,378 @@
+Simulator report for WH4574_DISPLAY
+Thu Jan 02 09:26:12 2014
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 141 nodes    ;
+; Simulation Coverage         ;      49.65 % ;
+; Total Number of Transitions ; 4723         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C10E144C8 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport  ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport  ; Transport     ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      49.65 % ;
+; Total nodes checked                                 ; 141          ;
+; Total output ports checked                          ; 141          ;
+; Total output ports with complete 1/0-value coverage ; 70           ;
+; Total output ports with no 1/0-value coverage       ; 71           ;
+; Total output ports with no 1-value coverage         ; 71           ;
+; Total output ports with no 0-value coverage         ; 71           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                            ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |WH4574_DISPLAY|S[0]             ; |WH4574_DISPLAY|S[0]             ; q                ;
+; |WH4574_DISPLAY|S[2]             ; |WH4574_DISPLAY|S[2]             ; q                ;
+; |WH4574_DISPLAY|S[1]             ; |WH4574_DISPLAY|S[1]             ; q                ;
+; |WH4574_DISPLAY|SEL~10           ; |WH4574_DISPLAY|SEL~10           ; combout          ;
+; |WH4574_DISPLAY|S~3              ; |WH4574_DISPLAY|S~3              ; combout          ;
+; |WH4574_DISPLAY|NUM[3]~17        ; |WH4574_DISPLAY|NUM[3]~17        ; combout          ;
+; |WH4574_DISPLAY|NUM[3]~18        ; |WH4574_DISPLAY|NUM[3]~18        ; combout          ;
+; |WH4574_DISPLAY|NUM[2]~20        ; |WH4574_DISPLAY|NUM[2]~20        ; combout          ;
+; |WH4574_DISPLAY|NUM[2]~21        ; |WH4574_DISPLAY|NUM[2]~21        ; combout          ;
+; |WH4574_DISPLAY|NUM[2]~22        ; |WH4574_DISPLAY|NUM[2]~22        ; combout          ;
+; |WH4574_DISPLAY|NUM[2]~23        ; |WH4574_DISPLAY|NUM[2]~23        ; combout          ;
+; |WH4574_DISPLAY|NUM[1]~24        ; |WH4574_DISPLAY|NUM[1]~24        ; combout          ;
+; |WH4574_DISPLAY|NUM[1]~25        ; |WH4574_DISPLAY|NUM[1]~25        ; combout          ;
+; |WH4574_DISPLAY|NUM[1]~26        ; |WH4574_DISPLAY|NUM[1]~26        ; combout          ;
+; |WH4574_DISPLAY|NUM[1]~27        ; |WH4574_DISPLAY|NUM[1]~27        ; combout          ;
+; |WH4574_DISPLAY|NUM[0]~29        ; |WH4574_DISPLAY|NUM[0]~29        ; combout          ;
+; |WH4574_DISPLAY|NUM[0]~30        ; |WH4574_DISPLAY|NUM[0]~30        ; combout          ;
+; |WH4574_DISPLAY|NUM[0]~31        ; |WH4574_DISPLAY|NUM[0]~31        ; combout          ;
+; |WH4574_DISPLAY|SEG~95           ; |WH4574_DISPLAY|SEG~95           ; combout          ;
+; |WH4574_DISPLAY|Equal21~2        ; |WH4574_DISPLAY|Equal21~2        ; combout          ;
+; |WH4574_DISPLAY|Equal21~3        ; |WH4574_DISPLAY|Equal21~3        ; combout          ;
+; |WH4574_DISPLAY|Equal21~4        ; |WH4574_DISPLAY|Equal21~4        ; combout          ;
+; |WH4574_DISPLAY|SEG~99           ; |WH4574_DISPLAY|SEG~99           ; combout          ;
+; |WH4574_DISPLAY|Equal21~8        ; |WH4574_DISPLAY|Equal21~8        ; combout          ;
+; |WH4574_DISPLAY|Equal21~9        ; |WH4574_DISPLAY|Equal21~9        ; combout          ;
+; |WH4574_DISPLAY|Equal21~10       ; |WH4574_DISPLAY|Equal21~10       ; combout          ;
+; |WH4574_DISPLAY|Equal21~11       ; |WH4574_DISPLAY|Equal21~11       ; combout          ;
+; |WH4574_DISPLAY|SEG~100          ; |WH4574_DISPLAY|SEG~100          ; combout          ;
+; |WH4574_DISPLAY|SEG~101          ; |WH4574_DISPLAY|SEG~101          ; combout          ;
+; |WH4574_DISPLAY|SEG~102          ; |WH4574_DISPLAY|SEG~102          ; combout          ;
+; |WH4574_DISPLAY|SEG~103          ; |WH4574_DISPLAY|SEG~103          ; combout          ;
+; |WH4574_DISPLAY|SEG~104          ; |WH4574_DISPLAY|SEG~104          ; combout          ;
+; |WH4574_DISPLAY|SEG~105          ; |WH4574_DISPLAY|SEG~105          ; combout          ;
+; |WH4574_DISPLAY|SEG~106          ; |WH4574_DISPLAY|SEG~106          ; combout          ;
+; |WH4574_DISPLAY|SEG~109          ; |WH4574_DISPLAY|SEG~109          ; combout          ;
+; |WH4574_DISPLAY|SEG~110          ; |WH4574_DISPLAY|SEG~110          ; combout          ;
+; |WH4574_DISPLAY|Equal21~13       ; |WH4574_DISPLAY|Equal21~13       ; combout          ;
+; |WH4574_DISPLAY|SEG~111          ; |WH4574_DISPLAY|SEG~111          ; combout          ;
+; |WH4574_DISPLAY|SEG~112          ; |WH4574_DISPLAY|SEG~112          ; combout          ;
+; |WH4574_DISPLAY|SEG~116          ; |WH4574_DISPLAY|SEG~116          ; combout          ;
+; |WH4574_DISPLAY|SEG~117          ; |WH4574_DISPLAY|SEG~117          ; combout          ;
+; |WH4574_DISPLAY|SEG~119          ; |WH4574_DISPLAY|SEG~119          ; combout          ;
+; |WH4574_DISPLAY|SEG~120          ; |WH4574_DISPLAY|SEG~120          ; combout          ;
+; |WH4574_DISPLAY|SEG~123          ; |WH4574_DISPLAY|SEG~123          ; combout          ;
+; |WH4574_DISPLAY|S~4              ; |WH4574_DISPLAY|S~4              ; combout          ;
+; |WH4574_DISPLAY|S~5              ; |WH4574_DISPLAY|S~5              ; combout          ;
+; |WH4574_DISPLAY|S[0]~6           ; |WH4574_DISPLAY|S[0]~6           ; combout          ;
+; |WH4574_DISPLAY|LED_SA~output    ; |WH4574_DISPLAY|LED_SA~output    ; o                ;
+; |WH4574_DISPLAY|LED_SA           ; |WH4574_DISPLAY|LED_SA           ; padout           ;
+; |WH4574_DISPLAY|LED_SB~output    ; |WH4574_DISPLAY|LED_SB~output    ; o                ;
+; |WH4574_DISPLAY|LED_SB           ; |WH4574_DISPLAY|LED_SB           ; padout           ;
+; |WH4574_DISPLAY|LED_SC~output    ; |WH4574_DISPLAY|LED_SC~output    ; o                ;
+; |WH4574_DISPLAY|LED_SC           ; |WH4574_DISPLAY|LED_SC           ; padout           ;
+; |WH4574_DISPLAY|LED_A~output     ; |WH4574_DISPLAY|LED_A~output     ; o                ;
+; |WH4574_DISPLAY|LED_A            ; |WH4574_DISPLAY|LED_A            ; padout           ;
+; |WH4574_DISPLAY|LED_B~output     ; |WH4574_DISPLAY|LED_B~output     ; o                ;
+; |WH4574_DISPLAY|LED_B            ; |WH4574_DISPLAY|LED_B            ; padout           ;
+; |WH4574_DISPLAY|LED_C~output     ; |WH4574_DISPLAY|LED_C~output     ; o                ;
+; |WH4574_DISPLAY|LED_C            ; |WH4574_DISPLAY|LED_C            ; padout           ;
+; |WH4574_DISPLAY|LED_D~output     ; |WH4574_DISPLAY|LED_D~output     ; o                ;
+; |WH4574_DISPLAY|LED_D            ; |WH4574_DISPLAY|LED_D            ; padout           ;
+; |WH4574_DISPLAY|LED_E~output     ; |WH4574_DISPLAY|LED_E~output     ; o                ;
+; |WH4574_DISPLAY|LED_E            ; |WH4574_DISPLAY|LED_E            ; padout           ;
+; |WH4574_DISPLAY|LED_F~output     ; |WH4574_DISPLAY|LED_F~output     ; o                ;
+; |WH4574_DISPLAY|LED_F            ; |WH4574_DISPLAY|LED_F            ; padout           ;
+; |WH4574_DISPLAY|LED_G~output     ; |WH4574_DISPLAY|LED_G~output     ; o                ;
+; |WH4574_DISPLAY|LED_G            ; |WH4574_DISPLAY|LED_G            ; padout           ;
+; |WH4574_DISPLAY|CLK~input        ; |WH4574_DISPLAY|CLK~input        ; o                ;
+; |WH4574_DISPLAY|CLK              ; |WH4574_DISPLAY|CLK              ; padout           ;
+; |WH4574_DISPLAY|CLK~inputclkctrl ; |WH4574_DISPLAY|CLK~inputclkctrl ; outclk           ;
++----------------------------------+----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                         ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |WH4574_DISPLAY|NUM[3]~16     ; |WH4574_DISPLAY|NUM[3]~16     ; combout          ;
+; |WH4574_DISPLAY|NUM[3]~19     ; |WH4574_DISPLAY|NUM[3]~19     ; combout          ;
+; |WH4574_DISPLAY|NUM[0]~28     ; |WH4574_DISPLAY|NUM[0]~28     ; combout          ;
+; |WH4574_DISPLAY|Equal21~0     ; |WH4574_DISPLAY|Equal21~0     ; combout          ;
+; |WH4574_DISPLAY|SEG~96        ; |WH4574_DISPLAY|SEG~96        ; combout          ;
+; |WH4574_DISPLAY|Equal21~1     ; |WH4574_DISPLAY|Equal21~1     ; combout          ;
+; |WH4574_DISPLAY|SEG~97        ; |WH4574_DISPLAY|SEG~97        ; combout          ;
+; |WH4574_DISPLAY|Equal21~5     ; |WH4574_DISPLAY|Equal21~5     ; combout          ;
+; |WH4574_DISPLAY|Equal21~6     ; |WH4574_DISPLAY|Equal21~6     ; combout          ;
+; |WH4574_DISPLAY|Equal21~7     ; |WH4574_DISPLAY|Equal21~7     ; combout          ;
+; |WH4574_DISPLAY|SEG~98        ; |WH4574_DISPLAY|SEG~98        ; combout          ;
+; |WH4574_DISPLAY|Equal21~12    ; |WH4574_DISPLAY|Equal21~12    ; combout          ;
+; |WH4574_DISPLAY|SEG~107       ; |WH4574_DISPLAY|SEG~107       ; combout          ;
+; |WH4574_DISPLAY|SEG~108       ; |WH4574_DISPLAY|SEG~108       ; combout          ;
+; |WH4574_DISPLAY|SEG~113       ; |WH4574_DISPLAY|SEG~113       ; combout          ;
+; |WH4574_DISPLAY|SEG~114       ; |WH4574_DISPLAY|SEG~114       ; combout          ;
+; |WH4574_DISPLAY|SEG~115       ; |WH4574_DISPLAY|SEG~115       ; combout          ;
+; |WH4574_DISPLAY|SEG~118       ; |WH4574_DISPLAY|SEG~118       ; combout          ;
+; |WH4574_DISPLAY|SEG~121       ; |WH4574_DISPLAY|SEG~121       ; combout          ;
+; |WH4574_DISPLAY|SEG~122       ; |WH4574_DISPLAY|SEG~122       ; combout          ;
+; |WH4574_DISPLAY|SEG~124       ; |WH4574_DISPLAY|SEG~124       ; combout          ;
+; |WH4574_DISPLAY|LED_DP~output ; |WH4574_DISPLAY|LED_DP~output ; o                ;
+; |WH4574_DISPLAY|LED_DP        ; |WH4574_DISPLAY|LED_DP        ; padout           ;
+; |WH4574_DISPLAY|DIN5[3]~input ; |WH4574_DISPLAY|DIN5[3]~input ; o                ;
+; |WH4574_DISPLAY|DIN5[3]       ; |WH4574_DISPLAY|DIN5[3]       ; padout           ;
+; |WH4574_DISPLAY|DIN4[3]~input ; |WH4574_DISPLAY|DIN4[3]~input ; o                ;
+; |WH4574_DISPLAY|DIN4[3]       ; |WH4574_DISPLAY|DIN4[3]       ; padout           ;
+; |WH4574_DISPLAY|DIN2[3]~input ; |WH4574_DISPLAY|DIN2[3]~input ; o                ;
+; |WH4574_DISPLAY|DIN2[3]       ; |WH4574_DISPLAY|DIN2[3]       ; padout           ;
+; |WH4574_DISPLAY|DIN1[3]~input ; |WH4574_DISPLAY|DIN1[3]~input ; o                ;
+; |WH4574_DISPLAY|DIN1[3]       ; |WH4574_DISPLAY|DIN1[3]       ; padout           ;
+; |WH4574_DISPLAY|DIN0[3]~input ; |WH4574_DISPLAY|DIN0[3]~input ; o                ;
+; |WH4574_DISPLAY|DIN0[3]       ; |WH4574_DISPLAY|DIN0[3]       ; padout           ;
+; |WH4574_DISPLAY|DIN3[3]~input ; |WH4574_DISPLAY|DIN3[3]~input ; o                ;
+; |WH4574_DISPLAY|DIN3[3]       ; |WH4574_DISPLAY|DIN3[3]       ; padout           ;
+; |WH4574_DISPLAY|DIN5[2]~input ; |WH4574_DISPLAY|DIN5[2]~input ; o                ;
+; |WH4574_DISPLAY|DIN5[2]       ; |WH4574_DISPLAY|DIN5[2]       ; padout           ;
+; |WH4574_DISPLAY|DIN4[2]~input ; |WH4574_DISPLAY|DIN4[2]~input ; o                ;
+; |WH4574_DISPLAY|DIN4[2]       ; |WH4574_DISPLAY|DIN4[2]       ; padout           ;
+; |WH4574_DISPLAY|DIN2[2]~input ; |WH4574_DISPLAY|DIN2[2]~input ; o                ;
+; |WH4574_DISPLAY|DIN2[2]       ; |WH4574_DISPLAY|DIN2[2]       ; padout           ;
+; |WH4574_DISPLAY|DIN1[2]~input ; |WH4574_DISPLAY|DIN1[2]~input ; o                ;
+; |WH4574_DISPLAY|DIN1[2]       ; |WH4574_DISPLAY|DIN1[2]       ; padout           ;
+; |WH4574_DISPLAY|DIN0[2]~input ; |WH4574_DISPLAY|DIN0[2]~input ; o                ;
+; |WH4574_DISPLAY|DIN0[2]       ; |WH4574_DISPLAY|DIN0[2]       ; padout           ;
+; |WH4574_DISPLAY|DIN3[2]~input ; |WH4574_DISPLAY|DIN3[2]~input ; o                ;
+; |WH4574_DISPLAY|DIN3[2]       ; |WH4574_DISPLAY|DIN3[2]       ; padout           ;
+; |WH4574_DISPLAY|DIN5[1]~input ; |WH4574_DISPLAY|DIN5[1]~input ; o                ;
+; |WH4574_DISPLAY|DIN5[1]       ; |WH4574_DISPLAY|DIN5[1]       ; padout           ;
+; |WH4574_DISPLAY|DIN4[1]~input ; |WH4574_DISPLAY|DIN4[1]~input ; o                ;
+; |WH4574_DISPLAY|DIN4[1]       ; |WH4574_DISPLAY|DIN4[1]       ; padout           ;
+; |WH4574_DISPLAY|DIN1[1]~input ; |WH4574_DISPLAY|DIN1[1]~input ; o                ;
+; |WH4574_DISPLAY|DIN1[1]       ; |WH4574_DISPLAY|DIN1[1]       ; padout           ;
+; |WH4574_DISPLAY|DIN2[1]~input ; |WH4574_DISPLAY|DIN2[1]~input ; o                ;
+; |WH4574_DISPLAY|DIN2[1]       ; |WH4574_DISPLAY|DIN2[1]       ; padout           ;
+; |WH4574_DISPLAY|DIN0[1]~input ; |WH4574_DISPLAY|DIN0[1]~input ; o                ;
+; |WH4574_DISPLAY|DIN0[1]       ; |WH4574_DISPLAY|DIN0[1]       ; padout           ;
+; |WH4574_DISPLAY|DIN3[1]~input ; |WH4574_DISPLAY|DIN3[1]~input ; o                ;
+; |WH4574_DISPLAY|DIN3[1]       ; |WH4574_DISPLAY|DIN3[1]       ; padout           ;
+; |WH4574_DISPLAY|DIN5[0]~input ; |WH4574_DISPLAY|DIN5[0]~input ; o                ;
+; |WH4574_DISPLAY|DIN5[0]       ; |WH4574_DISPLAY|DIN5[0]       ; padout           ;
+; |WH4574_DISPLAY|DIN4[0]~input ; |WH4574_DISPLAY|DIN4[0]~input ; o                ;
+; |WH4574_DISPLAY|DIN4[0]       ; |WH4574_DISPLAY|DIN4[0]       ; padout           ;
+; |WH4574_DISPLAY|DIN2[0]~input ; |WH4574_DISPLAY|DIN2[0]~input ; o                ;
+; |WH4574_DISPLAY|DIN2[0]       ; |WH4574_DISPLAY|DIN2[0]       ; padout           ;
+; |WH4574_DISPLAY|DIN1[0]~input ; |WH4574_DISPLAY|DIN1[0]~input ; o                ;
+; |WH4574_DISPLAY|DIN1[0]       ; |WH4574_DISPLAY|DIN1[0]       ; padout           ;
+; |WH4574_DISPLAY|DIN0[0]~input ; |WH4574_DISPLAY|DIN0[0]~input ; o                ;
+; |WH4574_DISPLAY|DIN0[0]       ; |WH4574_DISPLAY|DIN0[0]       ; padout           ;
+; |WH4574_DISPLAY|DIN3[0]~input ; |WH4574_DISPLAY|DIN3[0]~input ; o                ;
+; |WH4574_DISPLAY|DIN3[0]       ; |WH4574_DISPLAY|DIN3[0]       ; padout           ;
++-------------------------------+-------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                         ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |WH4574_DISPLAY|NUM[3]~16     ; |WH4574_DISPLAY|NUM[3]~16     ; combout          ;
+; |WH4574_DISPLAY|NUM[3]~19     ; |WH4574_DISPLAY|NUM[3]~19     ; combout          ;
+; |WH4574_DISPLAY|NUM[0]~28     ; |WH4574_DISPLAY|NUM[0]~28     ; combout          ;
+; |WH4574_DISPLAY|Equal21~0     ; |WH4574_DISPLAY|Equal21~0     ; combout          ;
+; |WH4574_DISPLAY|SEG~96        ; |WH4574_DISPLAY|SEG~96        ; combout          ;
+; |WH4574_DISPLAY|Equal21~1     ; |WH4574_DISPLAY|Equal21~1     ; combout          ;
+; |WH4574_DISPLAY|SEG~97        ; |WH4574_DISPLAY|SEG~97        ; combout          ;
+; |WH4574_DISPLAY|Equal21~5     ; |WH4574_DISPLAY|Equal21~5     ; combout          ;
+; |WH4574_DISPLAY|Equal21~6     ; |WH4574_DISPLAY|Equal21~6     ; combout          ;
+; |WH4574_DISPLAY|Equal21~7     ; |WH4574_DISPLAY|Equal21~7     ; combout          ;
+; |WH4574_DISPLAY|SEG~98        ; |WH4574_DISPLAY|SEG~98        ; combout          ;
+; |WH4574_DISPLAY|Equal21~12    ; |WH4574_DISPLAY|Equal21~12    ; combout          ;
+; |WH4574_DISPLAY|SEG~107       ; |WH4574_DISPLAY|SEG~107       ; combout          ;
+; |WH4574_DISPLAY|SEG~108       ; |WH4574_DISPLAY|SEG~108       ; combout          ;
+; |WH4574_DISPLAY|SEG~113       ; |WH4574_DISPLAY|SEG~113       ; combout          ;
+; |WH4574_DISPLAY|SEG~114       ; |WH4574_DISPLAY|SEG~114       ; combout          ;
+; |WH4574_DISPLAY|SEG~115       ; |WH4574_DISPLAY|SEG~115       ; combout          ;
+; |WH4574_DISPLAY|SEG~118       ; |WH4574_DISPLAY|SEG~118       ; combout          ;
+; |WH4574_DISPLAY|SEG~121       ; |WH4574_DISPLAY|SEG~121       ; combout          ;
+; |WH4574_DISPLAY|SEG~122       ; |WH4574_DISPLAY|SEG~122       ; combout          ;
+; |WH4574_DISPLAY|SEG~124       ; |WH4574_DISPLAY|SEG~124       ; combout          ;
+; |WH4574_DISPLAY|LED_DP~output ; |WH4574_DISPLAY|LED_DP~output ; o                ;
+; |WH4574_DISPLAY|LED_DP        ; |WH4574_DISPLAY|LED_DP        ; padout           ;
+; |WH4574_DISPLAY|DIN5[3]~input ; |WH4574_DISPLAY|DIN5[3]~input ; o                ;
+; |WH4574_DISPLAY|DIN5[3]       ; |WH4574_DISPLAY|DIN5[3]       ; padout           ;
+; |WH4574_DISPLAY|DIN4[3]~input ; |WH4574_DISPLAY|DIN4[3]~input ; o                ;
+; |WH4574_DISPLAY|DIN4[3]       ; |WH4574_DISPLAY|DIN4[3]       ; padout           ;
+; |WH4574_DISPLAY|DIN2[3]~input ; |WH4574_DISPLAY|DIN2[3]~input ; o                ;
+; |WH4574_DISPLAY|DIN2[3]       ; |WH4574_DISPLAY|DIN2[3]       ; padout           ;
+; |WH4574_DISPLAY|DIN1[3]~input ; |WH4574_DISPLAY|DIN1[3]~input ; o                ;
+; |WH4574_DISPLAY|DIN1[3]       ; |WH4574_DISPLAY|DIN1[3]       ; padout           ;
+; |WH4574_DISPLAY|DIN0[3]~input ; |WH4574_DISPLAY|DIN0[3]~input ; o                ;
+; |WH4574_DISPLAY|DIN0[3]       ; |WH4574_DISPLAY|DIN0[3]       ; padout           ;
+; |WH4574_DISPLAY|DIN3[3]~input ; |WH4574_DISPLAY|DIN3[3]~input ; o                ;
+; |WH4574_DISPLAY|DIN3[3]       ; |WH4574_DISPLAY|DIN3[3]       ; padout           ;
+; |WH4574_DISPLAY|DIN5[2]~input ; |WH4574_DISPLAY|DIN5[2]~input ; o                ;
+; |WH4574_DISPLAY|DIN5[2]       ; |WH4574_DISPLAY|DIN5[2]       ; padout           ;
+; |WH4574_DISPLAY|DIN4[2]~input ; |WH4574_DISPLAY|DIN4[2]~input ; o                ;
+; |WH4574_DISPLAY|DIN4[2]       ; |WH4574_DISPLAY|DIN4[2]       ; padout           ;
+; |WH4574_DISPLAY|DIN2[2]~input ; |WH4574_DISPLAY|DIN2[2]~input ; o                ;
+; |WH4574_DISPLAY|DIN2[2]       ; |WH4574_DISPLAY|DIN2[2]       ; padout           ;
+; |WH4574_DISPLAY|DIN1[2]~input ; |WH4574_DISPLAY|DIN1[2]~input ; o                ;
+; |WH4574_DISPLAY|DIN1[2]       ; |WH4574_DISPLAY|DIN1[2]       ; padout           ;
+; |WH4574_DISPLAY|DIN0[2]~input ; |WH4574_DISPLAY|DIN0[2]~input ; o                ;
+; |WH4574_DISPLAY|DIN0[2]       ; |WH4574_DISPLAY|DIN0[2]       ; padout           ;
+; |WH4574_DISPLAY|DIN3[2]~input ; |WH4574_DISPLAY|DIN3[2]~input ; o                ;
+; |WH4574_DISPLAY|DIN3[2]       ; |WH4574_DISPLAY|DIN3[2]       ; padout           ;
+; |WH4574_DISPLAY|DIN5[1]~input ; |WH4574_DISPLAY|DIN5[1]~input ; o                ;
+; |WH4574_DISPLAY|DIN5[1]       ; |WH4574_DISPLAY|DIN5[1]       ; padout           ;
+; |WH4574_DISPLAY|DIN4[1]~input ; |WH4574_DISPLAY|DIN4[1]~input ; o                ;
+; |WH4574_DISPLAY|DIN4[1]       ; |WH4574_DISPLAY|DIN4[1]       ; padout           ;
+; |WH4574_DISPLAY|DIN1[1]~input ; |WH4574_DISPLAY|DIN1[1]~input ; o                ;
+; |WH4574_DISPLAY|DIN1[1]       ; |WH4574_DISPLAY|DIN1[1]       ; padout           ;
+; |WH4574_DISPLAY|DIN2[1]~input ; |WH4574_DISPLAY|DIN2[1]~input ; o                ;
+; |WH4574_DISPLAY|DIN2[1]       ; |WH4574_DISPLAY|DIN2[1]       ; padout           ;
+; |WH4574_DISPLAY|DIN0[1]~input ; |WH4574_DISPLAY|DIN0[1]~input ; o                ;
+; |WH4574_DISPLAY|DIN0[1]       ; |WH4574_DISPLAY|DIN0[1]       ; padout           ;
+; |WH4574_DISPLAY|DIN3[1]~input ; |WH4574_DISPLAY|DIN3[1]~input ; o                ;
+; |WH4574_DISPLAY|DIN3[1]       ; |WH4574_DISPLAY|DIN3[1]       ; padout           ;
+; |WH4574_DISPLAY|DIN5[0]~input ; |WH4574_DISPLAY|DIN5[0]~input ; o                ;
+; |WH4574_DISPLAY|DIN5[0]       ; |WH4574_DISPLAY|DIN5[0]       ; padout           ;
+; |WH4574_DISPLAY|DIN4[0]~input ; |WH4574_DISPLAY|DIN4[0]~input ; o                ;
+; |WH4574_DISPLAY|DIN4[0]       ; |WH4574_DISPLAY|DIN4[0]       ; padout           ;
+; |WH4574_DISPLAY|DIN2[0]~input ; |WH4574_DISPLAY|DIN2[0]~input ; o                ;
+; |WH4574_DISPLAY|DIN2[0]       ; |WH4574_DISPLAY|DIN2[0]       ; padout           ;
+; |WH4574_DISPLAY|DIN1[0]~input ; |WH4574_DISPLAY|DIN1[0]~input ; o                ;
+; |WH4574_DISPLAY|DIN1[0]       ; |WH4574_DISPLAY|DIN1[0]       ; padout           ;
+; |WH4574_DISPLAY|DIN0[0]~input ; |WH4574_DISPLAY|DIN0[0]~input ; o                ;
+; |WH4574_DISPLAY|DIN0[0]       ; |WH4574_DISPLAY|DIN0[0]       ; padout           ;
+; |WH4574_DISPLAY|DIN3[0]~input ; |WH4574_DISPLAY|DIN3[0]~input ; o                ;
+; |WH4574_DISPLAY|DIN3[0]       ; |WH4574_DISPLAY|DIN3[0]       ; padout           ;
++-------------------------------+-------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Thu Jan 02 09:26:09 2014
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off WH4574_DISPLAY -c WH4574_DISPLAY
+Info: Using vector source file "C:/Users/Dawn/Desktop/WH4574/WH4574_CLOCK/WH4574_DISPLAY/WH4574_DISPLAY.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of WH4574_DISPLAY.vwf called WH4574_DISPLAY.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      49.65 %
+Info: Number of transitions in simulation is 4723
+Info: Vector file WH4574_DISPLAY.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 156 megabytes
+    Info: Processing ended: Thu Jan 02 09:26:14 2014
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
+
+

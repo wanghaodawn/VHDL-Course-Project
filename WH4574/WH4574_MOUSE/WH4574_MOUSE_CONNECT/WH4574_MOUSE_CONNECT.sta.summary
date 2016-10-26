@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'WH4574_DIV4K:inst5|COUNT2'
+Slack : -5.162
+TNS   : -273.067
+
+Type  : Slow 1200mV 85C Model Setup 'CLK_50MHZ'
+Slack : -3.104
+TNS   : -76.326
+
+Type  : Slow 1200mV 85C Model Setup 'WH4574_DIV1K:inst4|COUNT2'
+Slack : -0.347
+TNS   : -0.462
+
+Type  : Slow 1200mV 85C Model Setup 'WH4574_DIV4K:inst5|Q1'
+Slack : -0.268
+TNS   : -0.268
+
+Type  : Slow 1200mV 85C Model Setup 'WH4574_DIV1K:inst4|CO'
+Slack : -0.182
+TNS   : -0.182
+
+Type  : Slow 1200mV 85C Model Setup 'WH4574_DIV2K_CTRL:inst9|CO'
+Slack : 0.100
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'WH4574_DIV1K:inst4|CO'
+Slack : 0.130
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'WH4574_DIV4K:inst5|Q1'
+Slack : 0.231
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'WH4574_DIV4K:inst5|COUNT2'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'WH4574_DIV1K:inst4|COUNT2'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'WH4574_DIV2K_CTRL:inst9|CO'
+Slack : 0.483
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK_50MHZ'
+Slack : 0.746
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'WH4574_DIV4K:inst5|COUNT2'
+Slack : -4.715
+TNS   : -252.345
+
+Type  : Slow 1200mV 0C Model Setup 'CLK_50MHZ'
+Slack : -2.783
+TNS   : -68.502
+
+Type  : Slow 1200mV 0C Model Setup 'WH4574_DIV1K:inst4|COUNT2'
+Slack : -0.207
+TNS   : -0.207
+
+Type  : Slow 1200mV 0C Model Setup 'WH4574_DIV4K:inst5|Q1'
+Slack : -0.199
+TNS   : -0.199
+
+Type  : Slow 1200mV 0C Model Setup 'WH4574_DIV1K:inst4|CO'
+Slack : -0.129
+TNS   : -0.129
+
+Type  : Slow 1200mV 0C Model Setup 'WH4574_DIV2K_CTRL:inst9|CO'
+Slack : 0.195
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'WH4574_DIV1K:inst4|CO'
+Slack : 0.107
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'WH4574_DIV4K:inst5|Q1'
+Slack : 0.204
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'WH4574_DIV1K:inst4|COUNT2'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'WH4574_DIV4K:inst5|COUNT2'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'WH4574_DIV2K_CTRL:inst9|CO'
+Slack : 0.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK_50MHZ'
+Slack : 0.693
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'WH4574_DIV4K:inst5|COUNT2'
+Slack : -1.618
+TNS   : -73.222
+
+Type  : Fast 1200mV 0C Model Setup 'CLK_50MHZ'
+Slack : -0.709
+TNS   : -11.993
+
+Type  : Fast 1200mV 0C Model Setup 'WH4574_DIV4K:inst5|Q1'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'WH4574_DIV1K:inst4|CO'
+Slack : 0.237
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'WH4574_DIV1K:inst4|COUNT2'
+Slack : 0.421
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'WH4574_DIV2K_CTRL:inst9|CO'
+Slack : 0.620
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'WH4574_DIV1K:inst4|CO'
+Slack : 0.057
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'WH4574_DIV4K:inst5|Q1'
+Slack : 0.119
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'WH4574_DIV4K:inst5|COUNT2'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'WH4574_DIV1K:inst4|COUNT2'
+Slack : 0.187
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'WH4574_DIV2K_CTRL:inst9|CO'
+Slack : 0.202
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK_50MHZ'
+Slack : 0.298
+TNS   : 0.000
+
+------------------------------------------------------------

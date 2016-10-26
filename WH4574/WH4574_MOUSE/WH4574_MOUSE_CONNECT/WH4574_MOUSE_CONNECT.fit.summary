@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Jan 04 06:45:42 2014
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : WH4574_MOUSE_CONNECT
+Top-level Entity Name : WH4574_MOUSE_OVERALL
+Family : Cyclone III
+Device : EP3C10E144C8
+Timing Models : Final
+Total logic elements : 323 / 10,320 ( 3 % )
+    Total combinational functions : 316 / 10,320 ( 3 % )
+    Dedicated logic registers : 125 / 10,320 ( 1 % )
+Total registers : 125
+Total pins : 15 / 95 ( 16 % )
+Total virtual pins : 0
+Total memory bits : 0 / 423,936 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Dec 30 21:48:56 2013
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : WH4574_DISPLAY
+Top-level Entity Name : WH4574_DISPLAY
+Family : Cyclone III
+Device : EP3C10E144C8
+Timing Models : Final
+Total logic elements : 65 / 10,320 ( < 1 % )
+    Total combinational functions : 65 / 10,320 ( < 1 % )
+    Dedicated logic registers : 3 / 10,320 ( < 1 % )
+Total registers : 3
+Total pins : 36 / 95 ( 38 % )
+Total virtual pins : 0
+Total memory bits : 0 / 423,936 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

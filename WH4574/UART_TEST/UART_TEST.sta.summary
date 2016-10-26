@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -2.976
+TNS   : -63.230
+
+Type  : Slow 1200mV 85C Model Setup 'UART_TEST:inst|clk_out'
+Slack : -1.932
+TNS   : -23.968
+
+Type  : Slow 1200mV 85C Model Setup 'UART_TEST:inst1|clk_out'
+Slack : -1.761
+TNS   : -25.490
+
+Type  : Slow 1200mV 85C Model Hold 'UART_TEST:inst|clk_out'
+Slack : -3.022
+TNS   : -10.839
+
+Type  : Slow 1200mV 85C Model Hold 'UART_TEST:inst1|clk_out'
+Slack : -1.905
+TNS   : -7.563
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -1.415
+TNS   : -18.971
+
+Type  : Slow 1200mV 85C Model Recovery 'UART_TEST:inst1|clk_out'
+Slack : -1.430
+TNS   : -7.617
+
+Type  : Slow 1200mV 85C Model Recovery 'clk'
+Slack : -1.294
+TNS   : -15.082
+
+Type  : Slow 1200mV 85C Model Recovery 'UART_TEST:inst|clk_out'
+Slack : -0.644
+TNS   : -2.634
+
+Type  : Slow 1200mV 85C Model Removal 'UART_TEST:inst|clk_out'
+Slack : -0.782
+TNS   : -10.156
+
+Type  : Slow 1200mV 85C Model Removal 'UART_TEST:inst1|clk_out'
+Slack : -0.706
+TNS   : -9.173
+
+Type  : Slow 1200mV 85C Model Removal 'clk'
+Slack : 1.704
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -2.675
+TNS   : -57.038
+
+Type  : Slow 1200mV 0C Model Setup 'UART_TEST:inst1|clk_out'
+Slack : -1.715
+TNS   : -22.579
+
+Type  : Slow 1200mV 0C Model Setup 'UART_TEST:inst|clk_out'
+Slack : -1.705
+TNS   : -21.911
+
+Type  : Slow 1200mV 0C Model Hold 'UART_TEST:inst|clk_out'
+Slack : -2.727
+TNS   : -9.893
+
+Type  : Slow 1200mV 0C Model Hold 'UART_TEST:inst1|clk_out'
+Slack : -1.721
+TNS   : -6.551
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -1.298
+TNS   : -16.981
+
+Type  : Slow 1200mV 0C Model Recovery 'UART_TEST:inst1|clk_out'
+Slack : -1.371
+TNS   : -7.126
+
+Type  : Slow 1200mV 0C Model Recovery 'clk'
+Slack : -1.147
+TNS   : -13.300
+
+Type  : Slow 1200mV 0C Model Recovery 'UART_TEST:inst|clk_out'
+Slack : -0.394
+TNS   : -2.254
+
+Type  : Slow 1200mV 0C Model Removal 'UART_TEST:inst|clk_out'
+Slack : -0.736
+TNS   : -9.560
+
+Type  : Slow 1200mV 0C Model Removal 'UART_TEST:inst1|clk_out'
+Slack : -0.661
+TNS   : -8.588
+
+Type  : Slow 1200mV 0C Model Removal 'clk'
+Slack : 1.525
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.636
+TNS   : -11.856
+
+Type  : Fast 1200mV 0C Model Setup 'UART_TEST:inst1|clk_out'
+Slack : -0.509
+TNS   : -3.277
+
+Type  : Fast 1200mV 0C Model Setup 'UART_TEST:inst|clk_out'
+Slack : -0.343
+TNS   : -1.377
+
+Type  : Fast 1200mV 0C Model Hold 'UART_TEST:inst|clk_out'
+Slack : -1.490
+TNS   : -5.390
+
+Type  : Fast 1200mV 0C Model Hold 'UART_TEST:inst1|clk_out'
+Slack : -0.903
+TNS   : -3.877
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.711
+TNS   : -10.676
+
+Type  : Fast 1200mV 0C Model Recovery 'UART_TEST:inst1|clk_out'
+Slack : -0.323
+TNS   : -1.683
+
+Type  : Fast 1200mV 0C Model Recovery 'UART_TEST:inst|clk_out'
+Slack : -0.208
+TNS   : -0.208
+
+Type  : Fast 1200mV 0C Model Recovery 'clk'
+Slack : -0.039
+TNS   : -0.314
+
+Type  : Fast 1200mV 0C Model Removal 'UART_TEST:inst|clk_out'
+Slack : -0.328
+TNS   : -4.252
+
+Type  : Fast 1200mV 0C Model Removal 'UART_TEST:inst1|clk_out'
+Slack : -0.289
+TNS   : -3.752
+
+Type  : Fast 1200mV 0C Model Removal 'clk'
+Slack : 0.714
+TNS   : 0.000
+
+------------------------------------------------------------
